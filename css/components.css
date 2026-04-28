@@ -145,70 +145,61 @@
 
 .btn-case-study {
   position: relative;
-  display: inline-block;
+  display: block;
   width: var(--button-width-lg);
   height: var(--button-height-lg);
   border: 1px solid var(--color-primary);
-  background: transparent;
+  background-color: transparent;
   color: var(--color-primary);
   text-decoration: none;
   overflow: hidden;
-  isolation: isolate;
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 15px;
   line-height: 30px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-}
-
-.btn-case-study::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--color-primary);
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 400ms cubic-bezier(0.65, 0, 0.35, 1);
-  z-index: -1;
+  transition: background-color 300ms ease-out;
 }
 
 .btn-case-study__label {
   position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-inline: var(--space-8);
+  top: 50%;
+  left: var(--space-8);
+  transform: translateY(-50%);
   color: var(--color-primary);
-  transition: color 200ms ease-out, justify-content 0s 200ms;
+  white-space: nowrap;
+  transition:
+    left 300ms ease-out,
+    transform 300ms ease-out,
+    color 300ms ease-out;
 }
 
 .btn-case-study:hover,
 .btn-case-study:focus-visible {
   outline: none;
-}
-
-.btn-case-study:hover::before,
-.btn-case-study:focus-visible::before {
-  transform: scaleX(1);
+  background-color: var(--color-primary);
 }
 
 .btn-case-study:hover .btn-case-study__label,
 .btn-case-study:focus-visible .btn-case-study__label {
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: var(--color-on-primary);
-  justify-content: center;
-  transition: color 200ms ease-out 100ms, justify-content 0s 200ms;
 }
 
-.btn-case-study:active::before {
-  transform: scaleX(1);
-  transition-duration: 200ms;
+.btn-case-study:active {
+  background-color: var(--color-primary);
 }
 
 .btn-case-study:active .btn-case-study__label {
+  left: calc(100% - var(--space-8));
+  transform: translate(-100%, -50%);
   color: var(--color-on-primary);
-  justify-content: flex-end;
+  transition:
+    left 0s,
+    transform 0s,
+    color 0s;
 }
 
 .btn-case-study:focus-visible {
@@ -224,15 +215,19 @@
   letter-spacing: 0.12em;
 }
 
-.btn-case-study--sm .btn-case-study__label {
-  justify-content: center;
-  padding-inline: var(--space-6);
-}
-
+.btn-case-study--sm .btn-case-study__label,
 .btn-case-study--sm:hover .btn-case-study__label,
 .btn-case-study--sm:focus-visible .btn-case-study__label,
 .btn-case-study--sm:active .btn-case-study__label {
-  justify-content: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-case-study--sm:active .btn-case-study__label {
+  transition:
+    left 300ms ease-out,
+    transform 300ms ease-out,
+    color 300ms ease-out;
 }
 
 .social-icons {
@@ -470,14 +465,20 @@
   }
 
   .btn-case-study .btn-case-study__label {
-    justify-content: center;
-    padding-inline: var(--space-6);
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .btn-case-study:hover .btn-case-study__label,
   .btn-case-study:focus-visible .btn-case-study__label,
   .btn-case-study:active .btn-case-study__label {
-    justify-content: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-on-primary);
+    transition:
+      left 0s,
+      transform 0s,
+      color 300ms ease-out;
   }
 
   .experience-item__role,
