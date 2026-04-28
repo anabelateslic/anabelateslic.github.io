@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__a81e2b25-c885-40a3-80c4-d7faf399d2ce__get_design_context",
+      "mcp__a81e2b25-c885-40a3-80c4-d7faf399d2ce__get_screenshot"
+    ]
+  }
+}
