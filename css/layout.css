@@ -113,7 +113,7 @@
   align-items: center;
   justify-content: space-between;
   gap: clamp(20px, 4vw, 60px);
-  padding-left: clamp(160px, 19.2vw, 368px);
+  padding-left: calc(var(--sidebar-width) + var(--page-gutter-left));
   padding-right: clamp(0px, 4vw, 80px);
   padding-block: clamp(80px, 13.5vw, 260px) clamp(60px, 10.4vw, 200px);
   max-width: 100%;
@@ -260,7 +260,7 @@
   display: grid;
   grid-template-columns: 1.85fr 1fr;
   gap: clamp(20px, 4vw, 80px) clamp(20px, 4.2vw, 81px);
-  padding-left: clamp(160px, 19.3vw, 371px);
+  padding-left: calc(var(--sidebar-width) + var(--page-gutter-left));
   padding-right: clamp(0px, 1vw, 0px);
   padding-block: var(--space-15) var(--space-65);
 }
@@ -295,7 +295,7 @@
   grid-template-columns: 1fr 1fr;
   gap: clamp(20px, 4vw, 60px);
   padding: clamp(40px, 6vw, 60px);
-  padding-left: clamp(310px, 22vw, 350px);
+  padding-left: calc(var(--sidebar-width) + var(--page-gutter-left));
 }
 
 .gallery-masonry picture {
@@ -333,7 +333,7 @@
 }
 
 .about-section__title-cell {
-  padding: clamp(80px, 11.4vw, 220px) 0 0 clamp(220px, 24.5vw, 472px);
+  padding: clamp(80px, 11.4vw, 220px) 0 0 calc(var(--sidebar-width) + var(--page-gutter-left));
 }
 
 .about-section__items-cell {
@@ -350,10 +350,10 @@
 .about-headline {
   background: var(--color-surface-variant);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 559px);
-  gap: clamp(20px, 5vw, 100px);
+  grid-template-columns: minmax(0, 559px) minmax(0, 559px);
+  justify-content: space-between;
   align-items: stretch;
-  padding: var(--space-15) clamp(20px, 4vw, 80px) 0 clamp(220px, 19.2vw, 368px);
+  padding: var(--space-15) clamp(20px, 4vw, 80px) 0 calc(var(--sidebar-width) + var(--page-gutter-left));
 }
 
 .about-headline__text {
@@ -398,7 +398,7 @@
 
 .about-skills__col--gray {
   background: var(--color-surface-variant);
-  padding: clamp(80px, 9.7vw, 186px) clamp(20px, 3.5vw, 68px) clamp(80px, 12vw, 250px) clamp(220px, 24.6vw, 472px);
+  padding: clamp(80px, 9.7vw, 186px) clamp(20px, 3.5vw, 68px) clamp(80px, 12vw, 250px) calc(var(--sidebar-width) + var(--page-gutter-left));
   gap: clamp(40px, 5.8vw, 112px);
 }
 
