@@ -108,7 +108,8 @@ ul {
 
   --sidebar-width: 290px;
   --sidebar-padding-x: 40px;
-  --page-gutter-left: 60px;
+  --page-gutter-left: 80px;
+  --page-gutter-section-title: 135px;
   --mobile-gutter: 36px;
   --topbar-height: 82px;
   --topbar-padding-top: 30px;
