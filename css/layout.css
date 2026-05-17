@@ -499,6 +499,12 @@
   gap: clamp(40px, 5.8vw, 112px);
 }
 
+@media (min-width: 901px) {
+  .about-skills .skills-stack {
+    max-width: 355px;
+  }
+}
+
 @media (max-width: 900px) {
   .page-shell {
     padding-block-start: var(--topbar-height);
