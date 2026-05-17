@@ -120,6 +120,18 @@
   box-sizing: border-box;
 }
 
+.project-section__main--first {
+  padding-block-start: 80px;
+}
+
+.project-section__main--with-showcase {
+  padding-block-end: 80px;
+}
+
+.project-section__main--bottom-compact {
+  padding-block-end: 100px;
+}
+
 .project-section__text {
   min-width: 0;
   display: flex;
@@ -270,6 +282,7 @@
 .project-section__media-image--snagie {
   width: min(1008px, 100%);
   aspect-ratio: 1008 / 960;
+  background: transparent;
 }
 
 .project-section__media-image--e-sharp {
