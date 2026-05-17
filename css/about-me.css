@@ -8,7 +8,7 @@
 .hero-statement__line-top {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1;
   color: var(--color-on-surface);
   margin: 0;
@@ -17,8 +17,8 @@
 .hero-statement__line-display {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: 72px;
-  line-height: 100px;
+  font-size: 65px;
+  line-height: 90px;
   color: var(--color-primary);
   margin: 0;
 }
@@ -26,7 +26,7 @@
 .hero-statement__line-bottom {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1;
   color: var(--color-primary);
   text-align: end;
@@ -37,8 +37,8 @@
   width: 452px;
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 17px;
-  line-height: 30px;
+  font-size: 15px;
+  line-height: 27px;
   letter-spacing: 0.06em;
   color: var(--color-on-surface);
   display: flex;
@@ -60,9 +60,9 @@
   .hero-statement__line-top,
   .hero-statement__line-display,
   .hero-statement__line-bottom {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 500;
-    line-height: 33px;
+    line-height: 30px;
     text-align: center;
   }
 
@@ -77,8 +77,8 @@
 
   .about-headline__description {
     width: 100%;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 11px;
+    line-height: 14px;
     letter-spacing: 0.08em;
     text-align: center;
     gap: 16px;
