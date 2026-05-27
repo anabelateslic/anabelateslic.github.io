@@ -106,10 +106,10 @@ ul {
   --space-65: 260px;
   --space-75: 300px;
 
-  --sidebar-width: 290px;
+  --sidebar-width: 250px;
   --sidebar-padding-x: 40px;
-  --page-gutter-left: 80px;
-  --page-gutter-section-title: 135px;
+  --page-gutter-left: 67px;
+  --page-gutter-section-title: 104px;
   --mobile-gutter: 36px;
   --topbar-height: 82px;
   --topbar-padding-top: 30px;
@@ -129,14 +129,14 @@ ul {
   --transition-base: 250ms ease-out;
   --transition-slow: 400ms ease-out;
 
-  --max-page-width: 1920px;
+  --max-page-width: 1600px;
 }
 
 body {
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 15px;
-  line-height: 27px;
+  font-size: 14px;
+  line-height: 26px;
   letter-spacing: 0.06em;
   color: var(--color-on-surface);
   background: var(--color-surface);
@@ -145,15 +145,15 @@ body {
 .t-headline-large {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: 43px;
+  font-size: 40px;
   line-height: 1;
   letter-spacing: 0;
 }
 
 .t-headline-medium {
   font-family: var(--font-display);
-  font-weight: 400;
-  font-size: 32px;
+  font-weight: 500;
+  font-size: 20px;
   line-height: 1;
   letter-spacing: 0;
 }
@@ -161,7 +161,7 @@ body {
 .t-headline-small {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 22px;
+  font-size: 24px;
   line-height: 1;
   letter-spacing: 0;
 }
@@ -177,16 +177,16 @@ body {
 .t-title-large {
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .t-title-medium {
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -195,7 +195,7 @@ body {
 .t-title-small {
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -204,32 +204,32 @@ body {
 .t-body-large {
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 15px;
-  line-height: 27px;
+  font-size: 14px;
+  line-height: 26px;
   letter-spacing: 0.06em;
 }
 
 .t-body-medium {
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 13px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 18px;
   letter-spacing: 0.08em;
 }
 
 .t-body-small {
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 11px;
-  line-height: 14px;
+  font-size: 12px;
+  line-height: 16px;
   letter-spacing: 0.08em;
 }
 
 .t-label-large {
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 14px;
-  line-height: 27px;
+  font-size: 12px;
+  line-height: 24px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
@@ -237,8 +237,8 @@ body {
 .t-label-medium {
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 13px;
-  line-height: 16px;
+  font-size: 12px;
+  line-height: 18px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -246,8 +246,8 @@ body {
 .t-label-small {
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 11px;
-  line-height: 16px;
+  font-size: 12px;
+  line-height: 18px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -255,8 +255,8 @@ body {
 .t-meta-email {
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 11px;
+  line-height: 16px;
   letter-spacing: 0.08em;
 }
 

@@ -29,7 +29,7 @@
 
 .sidebar__brand {
   padding-top: var(--space-15);
-  padding-bottom: var(--space-50);
+  padding-bottom: 140px;
   flex-shrink: 0;
 }
 
@@ -53,7 +53,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 18px;
+  gap: var(--space-3);
   padding-bottom: var(--space-10);
   padding-right: var(--space-5);
 }
@@ -79,27 +79,27 @@
 .home-hero {
   position: relative;
   width: 100%;
-  aspect-ratio: 1920 / 1000;
-  max-height: 1000px;
+  aspect-ratio: 1600 / 720;
+  max-height: 720px;
   min-height: 100dvh;
   overflow: hidden;
 }
 
 .home-hero__image {
   position: absolute;
-  width: clamp(280px, 31.4%, 602px);
-  aspect-ratio: 602 / 806;
+  width: clamp(280px, 27.1%, 433px);
+  aspect-ratio: 433 / 580;
   object-fit: cover;
   background: var(--color-surface-variant);
 }
 
 .home-hero__image--shoe {
-  inset-inline-start: 29.5%;
+  inset-inline-start: 32.9%;
   inset-block-start: 0;
 }
 
 .home-hero__image--dali {
-  inset-inline-start: 60.4%;
+  inset-inline-start: 60%;
   inset-block-end: 0;
 }
 
@@ -115,7 +115,7 @@
   gap: var(--space-20);
   padding-left: calc(var(--sidebar-width) + var(--page-gutter-left));
   padding-right: 0;
-  padding-block: clamp(80px, 13.5vw, 260px) clamp(60px, 10.4vw, 200px);
+  padding-block: clamp(80px, 13.75vw, 220px) clamp(60px, 10.4vw, 170px);
   max-width: 100%;
   box-sizing: border-box;
 }
@@ -237,7 +237,7 @@
   min-width: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .project-section__media-image {
@@ -281,7 +281,6 @@
 }
 
 .project-section__media-image--snagie {
-  width: min(1008px, 100%);
   aspect-ratio: 1008 / 960;
   background: transparent;
 }
@@ -292,7 +291,6 @@
 }
 
 .project-section__media-image--graphic-default {
-  width: min(1012px, 100%);
   aspect-ratio: 1012 / 779;
 }
 
@@ -422,11 +420,11 @@
 }
 
 .about-section__title-cell {
-  padding: clamp(80px, 11.4vw, 220px) 0 0 calc(var(--sidebar-width) + var(--page-gutter-section-title));
+  padding: clamp(80px, 11.45vw, 183px) 0 0 calc(var(--sidebar-width) + var(--page-gutter-section-title));
 }
 
 .about-section__items-cell {
-  padding: clamp(80px, 11.4vw, 220px) clamp(20px, 8vw, 154px) clamp(80px, 13vw, 250px) clamp(40px, 9.7vw, 187px);
+  padding: clamp(80px, 11.45vw, 183px) clamp(20px, 8vw, 128px) clamp(80px, 13vw, 208px) clamp(40px, 9.75vw, 156px);
   display: flex;
   flex-direction: column;
   gap: var(--space-25);
@@ -442,7 +440,7 @@
   grid-template-columns: minmax(0, 560px) minmax(0, 830px);
   justify-content: space-between;
   align-items: stretch;
-  padding: var(--space-15) var(--space-20) 0 calc(var(--sidebar-width) + var(--page-gutter-left));
+  padding: var(--space-15) 0 0 calc(var(--sidebar-width) + var(--page-gutter-left));
 }
 
 .about-headline__text {
@@ -464,16 +462,16 @@
 .about-headline > picture {
   display: flex;
   align-items: stretch;
-  justify-content: flex-end;
-  padding-inline-end: var(--space-20);
+  justify-content: center;
+  padding-inline-end: 0;
 }
 
 .about-headline__portrait {
   width: 100%;
-  max-width: 560px;
+  max-width: 448px;
   height: auto;
   aspect-ratio: 560 / 830;
-  max-height: 830px;
+  max-height: 664px;
   object-fit: cover;
   align-self: center;
   background: var(--color-surface-variant);
@@ -487,7 +485,7 @@
 }
 
 .about-skills__col {
-  padding: clamp(80px, 18.7vw, 359px) clamp(20px, 5vw, 102px) clamp(80px, 9vw, 178px) clamp(40px, 9.8vw, 188px);
+  padding: clamp(80px, 18.65vw, 298px) clamp(20px, 5vw, 85px) clamp(80px, 9vw, 148px) clamp(40px, 9.8vw, 157px);
   display: flex;
   flex-direction: column;
   gap: var(--space-16);
@@ -495,8 +493,8 @@
 
 .about-skills__col--gray {
   background: var(--color-surface-variant);
-  padding: clamp(80px, 9.7vw, 186px) clamp(20px, 3.5vw, 68px) clamp(80px, 12vw, 250px) calc(var(--sidebar-width) + var(--page-gutter-section-title));
-  gap: clamp(40px, 5.8vw, 112px);
+  padding: clamp(80px, 9.7vw, 155px) clamp(20px, 3.5vw, 57px) clamp(80px, 12vw, 208px) calc(var(--sidebar-width) + var(--page-gutter-section-title));
+  gap: clamp(40px, 5.8vw, 93px);
 }
 
 @media (min-width: 901px) {

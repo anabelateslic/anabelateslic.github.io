@@ -71,14 +71,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 210px;
+  width: 170px;
   height: 40px;
-  padding-block: 10px;
+  padding-block: 8px;
   align-items: flex-start;
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 14px;
-  line-height: 27px;
+  font-size: 12px;
+  line-height: 24px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: inherit;
@@ -103,9 +103,9 @@
 
 .menu-button[aria-current="page"] {
   align-items: flex-end;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 0.12em;
-  line-height: 16px;
+  line-height: 18px;
 }
 
 .menu-dropdown__items {
@@ -124,13 +124,13 @@
 
 .menu-dropdown__item {
   display: flex;
-  width: 210px;
+  width: 170px;
   padding-block: var(--space-2);
   justify-content: flex-end;
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 13px;
-  line-height: 16px;
+  font-size: 12px;
+  line-height: 18px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: inherit;
@@ -155,8 +155,8 @@
   overflow: hidden;
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 14px;
-  line-height: 27px;
+  font-size: 12px;
+  line-height: 24px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   transition: background-color 300ms ease-out;
@@ -210,8 +210,8 @@
 .btn-case-study--sm {
   width: var(--button-width-sm);
   height: var(--button-height-sm);
-  font-size: 11px;
-  line-height: 16px;
+  font-size: 12px;
+  line-height: 18px;
   letter-spacing: 0.12em;
 }
 
@@ -260,8 +260,8 @@
 .email-link {
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 11px;
+  line-height: 16px;
   letter-spacing: 0.08em;
   color: inherit;
   transition: opacity var(--transition-fast);
@@ -275,7 +275,7 @@
 .project-section__title-text {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(25px, 3.15vw, 43px);
+  font-size: clamp(24px, 2.93vw, 40px);
   line-height: 1;
   color: var(--color-on-surface);
   margin: 0;
@@ -284,9 +284,9 @@
 .project-section__subtitle {
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: clamp(13px, 1.26vw, 16px);
+  font-size: clamp(13px, 1.18vw, 15px);
   line-height: 1;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-on-surface-muted);
   margin: 0;
@@ -295,8 +295,8 @@
 .project-section__description {
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 15px;
-  line-height: 27px;
+  font-size: 14px;
+  line-height: 26px;
   letter-spacing: 0.06em;
   color: var(--color-on-surface);
 }
@@ -346,8 +346,8 @@
 .education-item__role {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 22px;
-  line-height: 1;
+  font-size: 20px;
+  line-height: 1.2;
   margin: 0;
 }
 
@@ -357,9 +357,9 @@
 .education-item__duration {
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-on-surface-muted);
   margin: 0;
@@ -369,8 +369,8 @@
 .education-item__description {
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 15px;
-  line-height: 27px;
+  font-size: 14px;
+  line-height: 26px;
   letter-spacing: 0.06em;
   margin: 0;
 }
@@ -393,9 +393,9 @@
 .skill-group__subtitle {
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-on-surface-muted);
   margin: 0;
@@ -410,16 +410,16 @@
 .skill-group__item-title {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 22px;
-  line-height: 1;
+  font-size: 20px;
+  line-height: 1.2;
   margin: 0;
 }
 
 .skill-group__item-body {
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 15px;
-  line-height: 27px;
+  font-size: 14px;
+  line-height: 26px;
   letter-spacing: 0.06em;
   margin: 0;
 }
@@ -434,20 +434,20 @@
 
 @media (max-width: 900px) {
   .project-section__title-text {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 500;
     text-align: center;
   }
 
   .project-section__subtitle {
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 0.08em;
     text-align: center;
   }
 
   .project-section__description {
-    font-size: 11px;
-    line-height: 14px;
+    font-size: 12px;
+    line-height: 16px;
     letter-spacing: 0.08em;
     text-align: center;
   }
@@ -459,8 +459,8 @@
   .btn-case-study {
     width: var(--button-width-sm);
     height: var(--button-height-sm);
-    font-size: 11px;
-    line-height: 16px;
+    font-size: 12px;
+    line-height: 18px;
     letter-spacing: 0.12em;
   }
 
@@ -491,15 +491,15 @@
   .education-item__company,
   .experience-item__duration,
   .education-item__duration {
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 0.08em;
   }
 
   .experience-item__description,
   .education-item__description,
   .skill-group__item-body {
-    font-size: 11px;
-    line-height: 14px;
+    font-size: 12px;
+    line-height: 16px;
     letter-spacing: 0.08em;
   }
 
@@ -517,7 +517,7 @@
   }
 
   .skill-group__subtitle {
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 0.08em;
     color: var(--color-primary);
   }
@@ -530,7 +530,7 @@
   }
 
   .about-section__title {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 500;
   }
 
@@ -570,8 +570,8 @@
     border-bottom: 1px solid var(--color-on-surface-muted);
     font-family: var(--font-body);
     font-weight: 700;
-    font-size: 14px;
-    line-height: 27px;
+    font-size: 12px;
+    line-height: 24px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--color-on-surface);
@@ -599,8 +599,8 @@
   .mobile-menu__sub-item {
     font-family: var(--font-body);
     font-weight: 700;
-    font-size: 13px;
-    line-height: 16px;
+    font-size: 12px;
+    line-height: 18px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--color-on-surface);
