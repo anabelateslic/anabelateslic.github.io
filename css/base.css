@@ -296,3 +296,9 @@ body {
   white-space: nowrap;
   border: 0;
 }
+
+@media (max-width: 900px) {
+  body {
+    line-height: 20px;
+  }
+}

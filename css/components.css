@@ -436,6 +436,7 @@
   .project-section__title-text {
     font-size: 24px;
     font-weight: 500;
+    line-height: 1.2;
     text-align: center;
   }
 
@@ -447,9 +448,11 @@
 
   .project-section__description {
     font-size: 12px;
-    line-height: 16px;
+    line-height: 20px;
     letter-spacing: 0.08em;
     text-align: center;
+    max-width: 500px !important;
+    margin-inline: auto;
   }
 
   .project-section__main {
@@ -459,6 +462,7 @@
   .btn-case-study {
     width: var(--button-width-sm);
     height: var(--button-height-sm);
+    margin-inline: auto;
     font-size: 12px;
     line-height: 18px;
     letter-spacing: 0.12em;
@@ -485,6 +489,7 @@
   .education-item__role,
   .skill-group__item-title {
     font-size: 14px;
+    line-height: 1.2;
   }
 
   .experience-item__company,
@@ -499,7 +504,7 @@
   .education-item__description,
   .skill-group__item-body {
     font-size: 12px;
-    line-height: 16px;
+    line-height: 20px;
     letter-spacing: 0.08em;
   }
 
@@ -532,6 +537,7 @@
   .about-section__title {
     font-size: 24px;
     font-weight: 500;
+    line-height: 1.2;
   }
 
   .mobile-menu {
@@ -540,34 +546,39 @@
     inset-inline: 0;
     inset-block-start: var(--topbar-height);
     background: var(--color-surface);
-    overflow: hidden;
-    max-height: 0;
-    opacity: 0;
-    transition: max-height var(--transition-base), opacity var(--transition-base);
+    max-height: calc(100dvh - var(--topbar-height));
+    overflow-y: auto;
+    transform: translateY(-100%);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
     z-index: 89;
-    border-top: 1px solid var(--color-on-surface);
   }
 
   body.is-menu-open .mobile-menu {
-    max-height: calc(100vh - var(--topbar-height));
-    opacity: 1;
-    overflow-y: auto;
+    transform: translateY(0);
+    box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.18);
   }
 
   .mobile-menu__list {
     display: flex;
     flex-direction: column;
-    padding: var(--space-6) var(--mobile-gutter) var(--space-10);
+    padding: var(--space-6) var(--mobile-gutter) var(--space-6);
     gap: var(--space-4);
     list-style: none;
     margin: 0;
+  }
+
+  .mobile-menu__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--mobile-gutter) var(--space-8);
   }
 
   .mobile-menu__item {
     display: block;
     width: 100%;
     padding-block: var(--space-3);
-    border-bottom: 1px solid var(--color-on-surface-muted);
     font-family: var(--font-body);
     font-weight: 700;
     font-size: 12px;

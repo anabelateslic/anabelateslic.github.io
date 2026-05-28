@@ -60,9 +60,9 @@
   .hero-statement__line-top,
   .hero-statement__line-display,
   .hero-statement__line-bottom {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 500;
-    line-height: 33px;
+    line-height: 1.4;
     text-align: center;
   }
 
@@ -78,7 +78,7 @@
   .about-headline__description {
     width: 100%;
     font-size: 12px;
-    line-height: 16px;
+    line-height: 20px;
     letter-spacing: 0.08em;
     text-align: center;
     gap: 16px;
