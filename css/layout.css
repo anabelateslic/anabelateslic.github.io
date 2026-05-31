@@ -21,7 +21,6 @@
   mix-blend-mode: difference;
   color: #ffffff;
   pointer-events: none;
-  overflow-y: auto;
 }
 
 .sidebar > * {
@@ -30,7 +29,7 @@
 
 .sidebar__brand {
   padding-top: var(--space-15);
-  padding-bottom: 140px;
+  padding-bottom: clamp(40px, 10vh, 140px);
   flex-shrink: 0;
 }
 
@@ -519,7 +518,7 @@
     inset-inline: 0;
     width: 100%;
     height: var(--topbar-height);
-    padding: var(--topbar-padding-top) var(--mobile-gutter) 0;
+    padding: 0 var(--mobile-gutter) 0;
     background: var(--color-surface);
     display: flex;
     align-items: center;
