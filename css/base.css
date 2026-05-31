@@ -19,7 +19,7 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  font-smooth: always;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img,
@@ -112,13 +112,13 @@ ul {
   --page-gutter-section-title: 104px;
   --mobile-gutter: 36px;
   --topbar-height: 82px;
-  --topbar-padding-top: 30px;
+  --topbar-padding-top: 16px;
 
   --button-height-lg: 57px;
   --button-height-sm: 34px;
   --button-width-lg: 329px;
   --button-width-sm: 256px;
-  --avatar-size-desktop: 80px;
+  --avatar-size-desktop: 72px;
   --avatar-size-mobile: 36px;
 
   --radius-pill: 9999px;
@@ -264,27 +264,6 @@ body {
   color: var(--color-on-surface-muted);
 }
 
-.skip-link {
-  position: absolute;
-  inset-inline-start: var(--space-4);
-  inset-block-start: var(--space-4);
-  padding: var(--space-3) var(--space-5);
-  background: var(--color-on-surface);
-  color: var(--color-on-primary);
-  font-family: var(--font-body);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 13px;
-  transform: translateY(-150%);
-  transition: transform var(--transition-base);
-  z-index: 1000;
-}
-
-.skip-link:focus {
-  transform: translateY(0);
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -299,6 +278,7 @@ body {
 
 @media (max-width: 900px) {
   body {
-    line-height: 20px;
+    font-size: 13px;
+    line-height: 22px;
   }
 }

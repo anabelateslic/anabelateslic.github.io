@@ -21,6 +21,7 @@
   mix-blend-mode: difference;
   color: #ffffff;
   pointer-events: none;
+  overflow-y: auto;
 }
 
 .sidebar > * {
@@ -39,7 +40,7 @@
 }
 
 .sidebar__footer {
-  flex: 1 0 0;
+  flex: 1 0 auto;
   min-height: 0;
   display: flex;
   align-items: flex-end;
@@ -571,6 +572,7 @@
     align-items: center;
     gap: var(--space-9);
     padding-block: 0;
+    min-height: 0;
     flex-direction: column;
   }
 
@@ -652,8 +654,8 @@
 
   .gallery-masonry {
     grid-template-columns: 1fr;
-    gap: var(--space-2);
-    padding: var(--space-5);
+    gap: var(--space-12);
+    padding: 0;
   }
 
   .gallery-masonry picture:has(.gallery-masonry__tile--wide) {
@@ -665,7 +667,8 @@
   .gallery-masonry__tile--standard,
   .gallery-masonry__tile--wide {
     width: 100%;
-    aspect-ratio: 4 / 3;
+    height: auto;
+    aspect-ratio: auto;
   }
 
   .about-section,

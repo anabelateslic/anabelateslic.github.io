@@ -292,6 +292,10 @@
   margin: 0;
 }
 
+.page-graphic .project-section__subtitle {
+  line-height: 1.2;
+}
+
 .project-section__description {
   font-family: var(--font-body);
   font-weight: 400;
@@ -434,21 +438,22 @@
 
 @media (max-width: 900px) {
   .project-section__title-text {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 500;
     line-height: 1.2;
     text-align: center;
   }
 
   .project-section__subtitle {
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.2;
     letter-spacing: 0.08em;
     text-align: center;
   }
 
   .project-section__description {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 13px;
+    line-height: 22px;
     letter-spacing: 0.08em;
     text-align: center;
     max-width: 500px !important;
@@ -496,15 +501,16 @@
   .education-item__company,
   .experience-item__duration,
   .education-item__duration {
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.2;
     letter-spacing: 0.08em;
   }
 
   .experience-item__description,
   .education-item__description,
   .skill-group__item-body {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 13px;
+    line-height: 22px;
     letter-spacing: 0.08em;
   }
 
@@ -522,7 +528,8 @@
   }
 
   .skill-group__subtitle {
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.2;
     letter-spacing: 0.08em;
     color: var(--color-primary);
   }
@@ -535,7 +542,7 @@
   }
 
   .about-section__title {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 500;
     line-height: 1.2;
   }
@@ -569,10 +576,15 @@
 
   .mobile-menu__contact {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     gap: var(--space-3);
-    padding: var(--space-4) var(--mobile-gutter) var(--space-8);
+    padding: var(--space-6) var(--mobile-gutter);
+  }
+
+  .mobile-menu__contact .social-icons {
+    order: 1;
   }
 
   .mobile-menu__item {
