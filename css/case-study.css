@@ -73,7 +73,8 @@
 }
 
 .cs-figure img,
-.cs-figure picture {
+.cs-figure picture,
+.cs-figure video {
   display: block;
   width: 100%;
   height: auto;
