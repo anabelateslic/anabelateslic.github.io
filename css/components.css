@@ -143,6 +143,23 @@
   padding-inline-end: 14px;
 }
 
+.menu-dropdown__item.is-current {
+  padding-inline-end: 14px;
+}
+
+/* On a case-study page the current item is a dropdown child, so reveal the
+   dropdown and give the parent the same active treatment as aria-current. */
+.menu__item:has(.menu-dropdown__item.is-current) .menu-dropdown__items {
+  display: flex;
+}
+
+.menu__item:has(.menu-dropdown__item.is-current) .menu-button {
+  align-items: flex-end;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  line-height: 18px;
+}
+
 .btn-case-study {
   position: relative;
   display: block;
@@ -634,6 +651,10 @@
 
   .mobile-menu__sub-item:hover,
   .mobile-menu__sub-item:focus-visible {
+    color: var(--color-primary);
+  }
+
+  .mobile-menu__sub-item.is-current {
     color: var(--color-primary);
   }
 }

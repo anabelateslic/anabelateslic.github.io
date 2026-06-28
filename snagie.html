@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Snagie — UX/UI Case Study — Anabela Teslić</title>
+    <meta name="description" content="Snagie case study by Anabela Teslić — a responsive website and mobile app for an animal shelter, with animal profiles and a streamlined adoption flow." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/case-study.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body class="page-ux-ui page-case-study">
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="logo-mark logo-mark--mobile" href="index.html" aria-label="Anabela Teslić — Home">Anabela Teslić</a>
+        <button
+          class="menu-trigger"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open navigation"
+          data-menu-trigger
+        ></button>
+      </header>
+
+      <aside class="sidebar" aria-label="Primary">
+        <a class="logo-mark logo-mark--desktop sidebar__brand" href="index.html" aria-label="Anabela Teslić — Home">
+          <p>Anabela</p>
+          <p>Teslić</p>
+        </a>
+        <nav class="sidebar__menu" aria-label="Pages">
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu-button" href="ux-ui-design.html"><span class="menu-button__label">UX/UI Design</span></a>
+              <ul class="menu-dropdown__items">
+                <li><a class="menu-dropdown__item" href="artura.html">Artura</a></li>
+                <li><a class="menu-dropdown__item is-current" aria-current="page" href="snagie.html">Snagie</a></li>
+                <li><a class="menu-dropdown__item" href="e-sharp.html">E-Sharp</a></li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              <a class="menu-button" href="graphic-design.html"><span class="menu-button__label">Graphic Design</span></a>
+            </li>
+            <li class="menu__item">
+              <a class="menu-button" href="fine-arts.html"><span class="menu-button__label">Fine Arts</span></a>
+            </li>
+            <li class="menu__item">
+              <a class="menu-button" href="about-me.html"><span class="menu-button__label">About Me</span></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="sidebar__footer">
+          <div class="sidebar__contact">
+            <ul class="social-icons" aria-label="Social links">
+              <li>
+                <a class="social-icons__link" href="https://www.linkedin.com/in/anabela-tesli%C4%87-7952a528a/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.74 17.74" aria-hidden="true"><path fill-rule="evenodd" d="M14.62,0H3.13A3.13,3.13,0,0,0,0,3.13V14.62a3.13,3.13,0,0,0,3.13,3.12H14.62a3.12,3.12,0,0,0,3.12-3.12V3.13A3.13,3.13,0,0,0,14.62,0ZM5.88,14.34H3.62V7.05H5.88ZM4.74,6.09A1.35,1.35,0,1,1,6.07,4.75,1.34,1.34,0,0,1,4.74,6.09Zm9.6,8.25H12.09V10.51c0-1-.4-1.63-1.23-1.63s-1.37.61-1.37,1.63v3.83H7.32V7.05H9.49V8a2.54,2.54,0,0,1,2.2-1.2c1.54,0,2.65.94,2.65,2.89Z"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="social-icons__link" href="https://www.behance.net/anabelateslic" target="_blank" rel="noopener" aria-label="Behance">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.74 17.74" aria-hidden="true"><path fill-rule="evenodd" d="M6.26,9.26H4.5v2.42H6.23a1.63,1.63,0,0,0,.45-.06,1.11,1.11,0,0,0,.38-.18.92.92,0,0,0,.27-.36,1.28,1.28,0,0,0,.1-.56,1.29,1.29,0,0,0-.32-1A1.23,1.23,0,0,0,6.26,9.26Z"/><path fill-rule="evenodd" d="M6.86,7.71a1,1,0,0,0,.28-.79,1.23,1.23,0,0,0-.09-.51.88.88,0,0,0-.26-.31A1,1,0,0,0,6.43,6,1.84,1.84,0,0,0,6,5.9H4.5V8H6.14A1.08,1.08,0,0,0,6.86,7.71Z"/><polygon fill-rule="evenodd" points="6.24 11.68 6.23 11.68 6.24 11.69 6.24 11.68"/><path fill-rule="evenodd" d="M14.62,0H3.13A3.13,3.13,0,0,0,0,3.13V14.62a3.13,3.13,0,0,0,3.13,3.12H14.62a3.12,3.12,0,0,0,3.12-3.12V3.13A3.13,3.13,0,0,0,14.62,0ZM10.7,5.12h3V6h-3ZM8.83,11.79a2.25,2.25,0,0,1-.58.79,2.37,2.37,0,0,1-.84.46,3.43,3.43,0,0,1-1,.14H2.87V4.42H6.35a4.08,4.08,0,0,1,1,.11,2.18,2.18,0,0,1,.75.36,1.78,1.78,0,0,1,.48.67,2.81,2.81,0,0,1,.17,1,2.22,2.22,0,0,1-.26,1.11,2,2,0,0,1-.75.72,1.77,1.77,0,0,1,1,.82,2.73,2.73,0,0,1,.34,1.41A2.88,2.88,0,0,1,8.83,11.79Zm2.55-.14h0a1.16,1.16,0,0,0,1,.38,1.19,1.19,0,0,0,.76-.26,1.13,1.13,0,0,0,.39-.57h1.29a3,3,0,0,1-.95,1.64,2.43,2.43,0,0,1-1.54.49,2.64,2.64,0,0,1-1.14-.24,2.47,2.47,0,0,1-.86-.68,3.23,3.23,0,0,1-.55-1.06A4.84,4.84,0,0,1,9.53,10a4.36,4.36,0,0,1,.2-1.33,3.07,3.07,0,0,1,.56-1.06,2.66,2.66,0,0,1,.86-.71,2.46,2.46,0,0,1,1.12-.25A2.22,2.22,0,0,1,13.46,7a2.47,2.47,0,0,1,.83.84A3.68,3.68,0,0,1,14.76,9a5.45,5.45,0,0,1,.11,1.41H11A1.92,1.92,0,0,0,11.38,11.65Z"/><path fill-rule="evenodd" d="M13.05,8.32A1,1,0,0,0,12.22,8a1.06,1.06,0,0,0-.58.14,1.24,1.24,0,0,0-.37.35,1.41,1.41,0,0,0-.2.45,2.25,2.25,0,0,0-.06.41H13.4a2,2,0,0,0-.34-1Z"/></svg>
+                </a>
+              </li>
+            </ul>
+            <a class="email-link" href="mailto:anabela.teslic@gmail.com">anabela.teslic@gmail.com</a>
+          </div>
+          <span class="sidebar__divider" aria-hidden="true"></span>
+        </div>
+      </aside>
+
+      <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
+        <ul class="mobile-menu__list">
+          <li>
+            <a class="mobile-menu__item" href="ux-ui-design.html">UX/UI Design</a>
+            <div class="mobile-menu__sub">
+              <a class="mobile-menu__sub-item" href="artura.html">Artura</a>
+              <a class="mobile-menu__sub-item is-current" aria-current="page" href="snagie.html">Snagie</a>
+              <a class="mobile-menu__sub-item" href="e-sharp.html">E-Sharp</a>
+            </div>
+          </li>
+          <li><a class="mobile-menu__item" href="graphic-design.html">Graphic Design</a></li>
+          <li><a class="mobile-menu__item" href="fine-arts.html">Fine Arts</a></li>
+          <li><a class="mobile-menu__item" href="about-me.html">About Me</a></li>
+        </ul>
+        <div class="mobile-menu__contact">
+          <ul class="social-icons" aria-label="Social links">
+            <li>
+              <a class="social-icons__link" href="https://www.linkedin.com/in/anabela-tesli%C4%87-7952a528a/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.74 17.74" aria-hidden="true"><path fill-rule="evenodd" d="M14.62,0H3.13A3.13,3.13,0,0,0,0,3.13V14.62a3.13,3.13,0,0,0,3.13,3.12H14.62a3.12,3.12,0,0,0,3.12-3.12V3.13A3.13,3.13,0,0,0,14.62,0ZM5.88,14.34H3.62V7.05H5.88ZM4.74,6.09A1.35,1.35,0,1,1,6.07,4.75,1.34,1.34,0,0,1,4.74,6.09Zm9.6,8.25H12.09V10.51c0-1-.4-1.63-1.23-1.63s-1.37.61-1.37,1.63v3.83H7.32V7.05H9.49V8a2.54,2.54,0,0,1,2.2-1.2c1.54,0,2.65.94,2.65,2.89Z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-icons__link" href="https://www.behance.net/anabelateslic" target="_blank" rel="noopener" aria-label="Behance">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.74 17.74" aria-hidden="true"><path fill-rule="evenodd" d="M6.26,9.26H4.5v2.42H6.23a1.63,1.63,0,0,0,.45-.06,1.11,1.11,0,0,0,.38-.18.92.92,0,0,0,.27-.36,1.28,1.28,0,0,0,.1-.56,1.29,1.29,0,0,0-.32-1A1.23,1.23,0,0,0,6.26,9.26Z"/><path fill-rule="evenodd" d="M6.86,7.71a1,1,0,0,0,.28-.79,1.23,1.23,0,0,0-.09-.51.88.88,0,0,0-.26-.31A1,1,0,0,0,6.43,6,1.84,1.84,0,0,0,6,5.9H4.5V8H6.14A1.08,1.08,0,0,0,6.86,7.71Z"/><polygon fill-rule="evenodd" points="6.24 11.68 6.23 11.68 6.24 11.69 6.24 11.68"/><path fill-rule="evenodd" d="M14.62,0H3.13A3.13,3.13,0,0,0,0,3.13V14.62a3.13,3.13,0,0,0,3.13,3.12H14.62a3.12,3.12,0,0,0,3.12-3.12V3.13A3.13,3.13,0,0,0,14.62,0ZM10.7,5.12h3V6h-3ZM8.83,11.79a2.25,2.25,0,0,1-.58.79,2.37,2.37,0,0,1-.84.46,3.43,3.43,0,0,1-1,.14H2.87V4.42H6.35a4.08,4.08,0,0,1,1,.11,2.18,2.18,0,0,1,.75.36,1.78,1.78,0,0,1,.48.67,2.81,2.81,0,0,1,.17,1,2.22,2.22,0,0,1-.26,1.11,2,2,0,0,1-.75.72,1.77,1.77,0,0,1,1,.82,2.73,2.73,0,0,1,.34,1.41A2.88,2.88,0,0,1,8.83,11.79Zm2.55-.14h0a1.16,1.16,0,0,0,1,.38,1.19,1.19,0,0,0,.76-.26,1.13,1.13,0,0,0,.39-.57h1.29a3,3,0,0,1-.95,1.64,2.43,2.43,0,0,1-1.54.49,2.64,2.64,0,0,1-1.14-.24,2.47,2.47,0,0,1-.86-.68,3.23,3.23,0,0,1-.55-1.06A4.84,4.84,0,0,1,9.53,10a4.36,4.36,0,0,1,.2-1.33,3.07,3.07,0,0,1,.56-1.06,2.66,2.66,0,0,1,.86-.71,2.46,2.46,0,0,1,1.12-.25A2.22,2.22,0,0,1,13.46,7a2.47,2.47,0,0,1,.83.84A3.68,3.68,0,0,1,14.76,9a5.45,5.45,0,0,1,.11,1.41H11A1.92,1.92,0,0,0,11.38,11.65Z"/><path fill-rule="evenodd" d="M13.05,8.32A1,1,0,0,0,12.22,8a1.06,1.06,0,0,0-.58.14,1.24,1.24,0,0,0-.37.35,1.41,1.41,0,0,0-.2.45,2.25,2.25,0,0,0-.06.41H13.4a2,2,0,0,0-.34-1Z"/></svg>
+              </a>
+            </li>
+          </ul>
+          <a class="email-link" href="mailto:anabela.teslic@gmail.com">anabela.teslic@gmail.com</a>
+        </div>
+      </nav>
+
+      <main id="main" class="main case-study">
+        <!-- Hero -->
+        <section class="cs-hero" data-reveal>
+          <div class="cs-lead">
+            <header class="cs-lead__heading">
+              <h1 class="cs-heading">Snagie</h1>
+              <p class="cs-eyebrow">Website and mobile app</p>
+            </header>
+            <div class="cs-lead__body">
+              <p class="cs-body">Snagie is an organization with the goal of providing shelter for animals and finding them new homes.</p>
+              <p class="cs-body">The goal is to provide a website and mobile app for easier communication and to find new pet owners or volunteers.</p>
+            </div>
+            <!-- TODO: link to project file / prototype once available -->
+            <a class="btn-case-study" href="#"><span class="btn-case-study__label">Project File</span></a>
+          </div>
+          <div class="cs-hero__media">
+            <div class="cs-figure cs-placeholder" style="--ar: 716 / 619;">
+              <span class="cs-placeholder__label">snagie-hero-project-image<span>716 × 619</span></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Project overview -->
+        <section class="cs-overview" data-reveal>
+          <div class="cs-overview__block">
+            <h2 class="cs-subheading">Project Overview</h2>
+            <p class="cs-body">Conducting research and interviews, paper and digital wireframing, low- and high-fidelity prototyping for responsive design, conducting usability studies, accounting for accessibility, and iterating on designs.</p>
+          </div>
+          <div class="cs-overview__block">
+            <h2 class="cs-subheading">Project Goal</h2>
+            <p class="cs-body">Design a website and mobile app with animal profiles to provide information and improve opportunities for prospective pet owners to meet and adopt pets. Additional features, such as an adoption plan and a donation page, help users learn about and support the organization.</p>
+          </div>
+        </section>
+
+        <!-- User research -->
+        <section class="cs-research" data-reveal>
+          <div class="cs-research__intro">
+            <h2 class="cs-heading">User Research</h2>
+            <p class="cs-body">I researched to better understand users and their needs. I found that pet owners and nature lovers often hesitate to adopt due to limited knowledge and time.</p>
+            <p class="cs-body">Many prefer to learn about pets and plan ahead before visiting a shelter to ensure a good match and a quicker adoption process.</p>
+          </div>
+          <div class="cs-research__persona">
+            <div class="cs-persona">
+              <div class="cs-persona__head">
+                <div class="cs-figure cs-placeholder" style="--ar: 1 / 1;">
+                  <span class="cs-placeholder__label">snagie-persona-petar-vidak<span>215 × 215</span></span>
+                </div>
+                <div class="cs-persona__meta">
+                  <h3 class="cs-subheading cs-persona__name">Petar Vidak</h3>
+                  <ul class="cs-persona__details">
+                    <li class="cs-body muted">Age: 23</li>
+                    <li class="cs-body muted">Education: Biology student</li>
+                    <li class="cs-body muted">Hometown: Split, Croatia</li>
+                    <li class="cs-body muted">Family: Lives with parents</li>
+                    <li class="cs-body muted">Occupation: Student</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cs-persona__group">
+                <h3 class="cs-subheading">Goals</h3>
+                <ul class="cs-persona__list">
+                  <li class="cs-body">Have a balanced schedule between studying and caring for his pet.</li>
+                  <li class="cs-body">Find a way to connect with a faraway animal shelter.</li>
+                  <li class="cs-body">Help his family decide on adopting a new dog.</li>
+                </ul>
+              </div>
+              <div class="cs-persona__group">
+                <h3 class="cs-subheading">Frustrations</h3>
+                <ul class="cs-persona__list">
+                  <li class="cs-body">Not having enough time to volunteer and support the animal shelter.</li>
+                  <li class="cs-body">“Sometimes, looking for a new pet can be overwhelming and time-consuming.”</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Key challenges -->
+        <section class="cs-split" data-reveal>
+          <div class="cs-split__aside">
+            <h2 class="cs-heading">Key Challenges</h2>
+          </div>
+          <div class="cs-split__content">
+            <div class="cs-numbered-list">
+              <div class="cs-numbered">
+                <p class="cs-number">01</p>
+                <div class="cs-numbered__text">
+                  <h3 class="cs-subheading">Information</h3>
+                  <p class="cs-body">Animal adoption websites are not providing enough information or online option for scheduling appointment.</p>
+                </div>
+              </div>
+              <div class="cs-numbered">
+                <p class="cs-number">02</p>
+                <div class="cs-numbered__text">
+                  <h3 class="cs-subheading">Time</h3>
+                  <p class="cs-body">Too many forms or obligations before deciding on meeting a pet discourage people from scheduling appointment.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Challenge solution (gradient band) -->
+        <section class="cs-band cs-band--snagie" data-reveal>
+          <div class="cs-solution-stack">
+            <!-- NOTE: this caption is leftover Artura copy in the Figma source (does not match an animal-shelter app) — verify/replace. -->
+            <div class="cs-solution-row">
+              <p class="cs-body cs-solution-row__caption">Access to the audio transcript and language selection.</p>
+              <div class="cs-figure cs-placeholder" style="--ar: 686 / 460;">
+                <span class="cs-placeholder__label">snagie-solution-audio-transcript<span>686 × 460</span></span>
+              </div>
+            </div>
+            <div class="cs-solution-row">
+              <p class="cs-body cs-solution-row__caption">A short adoption form ensures that gathering information about potential pet owners is not time-consuming.</p>
+              <div class="cs-figure cs-placeholder" style="--ar: 686 / 460;">
+                <span class="cs-placeholder__label">snagie-solution-adoption-form<span>686 × 460</span></span>
+              </div>
+            </div>
+            <!-- NOTE: leftover Artura copy in the Figma source — verify/replace. -->
+            <p class="cs-body cs-solution-row__caption">Map button for easier gallery navigation and like button to bookmark items for future access.</p>
+          </div>
+        </section>
+
+        <!-- Starting the design -->
+        <section class="cs-feature-row cs-feature-row--media-top" data-reveal>
+          <div class="cs-feature-row__text">
+            <h2 class="cs-heading">Starting the Design</h2>
+            <p class="cs-body">The website was optimized for all screen sizes, but testing showed a mobile app offers better functionality on smaller devices.</p>
+            <p class="cs-body">A tiered layout on the homepage improves readability and highlights the main user path to reduce pain points.</p>
+          </div>
+          <div class="cs-feature-row__media">
+            <div class="cs-figure cs-placeholder" style="--ar: 700 / 748;">
+              <span class="cs-placeholder__label">snagie-carousel-3-images<span>700 × 748</span></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- User testing -->
+        <section class="cs-panel-duo" data-reveal>
+          <div class="cs-panel-duo__panel">
+            <h2 class="cs-heading">User testing results</h2>
+            <div class="cs-lead__body">
+              <p class="cs-body">I conducted two rounds of usability studies. Results from the first study helped me iterate and build from wireframes to mockups.</p>
+              <p class="cs-body">In the second study on high-fidelity prototype, findings showed parts and elements that needed to be improved and refined.</p>
+            </div>
+          </div>
+          <div class="cs-panel-duo__content">
+            <div class="cs-numbered-list">
+              <div class="cs-numbered">
+                <p class="cs-number">01</p>
+                <div class="cs-numbered__text">
+                  <h3 class="cs-subheading">Pet search</h3>
+                  <p class="cs-body">Participants wanted more user-friendly features for pet searches.</p>
+                </div>
+              </div>
+              <div class="cs-numbered">
+                <p class="cs-number">02</p>
+                <div class="cs-numbered__text">
+                  <h3 class="cs-subheading">Information hierarchy</h3>
+                  <p class="cs-body">Users would prefer to see more important information about the pet highlighted for easier reading.</p>
+                </div>
+              </div>
+              <div class="cs-numbered">
+                <p class="cs-number">03</p>
+                <div class="cs-numbered__text">
+                  <h3 class="cs-subheading">Reservation form</h3>
+                  <p class="cs-body">A more descriptive reservation form would be helpful to users.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testing changes -->
+        <section class="cs-changes" data-reveal>
+          <div class="cs-changes__col cs-changes__col--panel">
+            <div class="cs-changes__text">
+              <h2 class="cs-heading">Changes</h2>
+              <div class="cs-changes__list">
+                <p class="cs-body">The search and filter layouts have been modified to improve accessibility.</p>
+                <p class="cs-body">Sign-up and log-in buttons have been added for ease of access.</p>
+                <p class="cs-body">The Pet Card has been redesigned for more intuitive interaction.</p>
+                <p class="cs-body">The layout of the reservation form has been modified, and new text fields have been added.</p>
+              </div>
+            </div>
+            <div class="cs-figure cs-placeholder" style="--ar: 476 / 600;">
+              <span class="cs-placeholder__label">snagie-changes-left-mockup<span>476 × 600</span></span>
+            </div>
+          </div>
+          <div class="cs-changes__col cs-changes__col--media">
+            <div class="cs-figure cs-placeholder" style="--ar: 769 / 600;">
+              <span class="cs-placeholder__label">snagie-changes-right-mockup-1<span>769 × 600</span></span>
+            </div>
+            <div class="cs-figure cs-placeholder" style="--ar: 769 / 600;">
+              <span class="cs-placeholder__label">snagie-changes-right-mockup-2<span>769 × 600</span></span>
+            </div>
+            <p class="cs-body">The layout of the reservation form has been modified, and new text fields have been added.</p>
+          </div>
+        </section>
+
+        <!-- Mockup and high-fidelity -->
+        <section class="cs-final" data-reveal>
+          <div class="cs-final__col cs-final__col--left">
+            <div class="cs-final__intro">
+              <h2 class="cs-heading">Mockups and<br />High-Fidelity Prototype</h2>
+              <p class="cs-body">Check out and test the final responsive web design for Snagie Animal Shelter.</p>
+              <!-- TODO: link to live prototype once available -->
+              <a class="btn-case-study" href="#"><span class="btn-case-study__label">View Prototype</span></a>
+            </div>
+            <div class="cs-final__images">
+              <div class="cs-figure cs-placeholder" style="--ar: 476 / 600;">
+                <span class="cs-placeholder__label">snagie-mockup-left-top<span>476 × 600</span></span>
+              </div>
+              <div class="cs-figure cs-placeholder" style="--ar: 476 / 303;">
+                <span class="cs-placeholder__label">snagie-mockup-left-bottom<span>476 × 303</span></span>
+              </div>
+            </div>
+          </div>
+          <div class="cs-final__col cs-final__col--right">
+            <div class="cs-figure cs-placeholder" style="--ar: 769 / 1221;">
+              <span class="cs-placeholder__label">snagie-mockup-right-tall<span>769 × 1221</span></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Closing showcase -->
+        <section class="cs-banner" data-reveal>
+          <div class="cs-figure cs-placeholder" style="--ar: 1600 / 1622;">
+            <span class="cs-placeholder__label">snagie-showcase-image<span>1600 × 1622</span></span>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <noscript>
+      <style>
+        [data-reveal] { opacity: 1 !important; transform: none !important; }
+      </style>
+    </noscript>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

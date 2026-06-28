@@ -3,16 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>UX/UI Design — Anabela Teslić</title>
-    <meta name="description" content="UX/UI design projects by Anabela Teslić — Artura, Snagie, and E-Sharp." />
+    <title>E-Sharp — UX/UI Case Study — Anabela Teslić</title>
+    <meta name="description" content="E-Sharp case study by Anabela Teslić — course-page design for a music e-learning platform, focused on navigation, progress and accessibility." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/case-study.css" />
     <link rel="stylesheet" href="css/animations.css" />
   </head>
-  <body class="page-ux-ui">
+  <body class="page-ux-ui page-case-study">
     <div class="page-shell">
       <header class="topbar">
         <a class="logo-mark logo-mark--mobile" href="index.html" aria-label="Anabela Teslić — Home">Anabela Teslić</a>
@@ -34,11 +35,11 @@
         <nav class="sidebar__menu" aria-label="Pages">
           <ul class="menu">
             <li class="menu__item">
-              <a class="menu-button" aria-current="page" href="ux-ui-design.html"><span class="menu-button__label">UX/UI Design</span></a>
+              <a class="menu-button" href="ux-ui-design.html"><span class="menu-button__label">UX/UI Design</span></a>
               <ul class="menu-dropdown__items">
                 <li><a class="menu-dropdown__item" href="artura.html">Artura</a></li>
                 <li><a class="menu-dropdown__item" href="snagie.html">Snagie</a></li>
-                <li><a class="menu-dropdown__item" href="e-sharp.html">E-Sharp</a></li>
+                <li><a class="menu-dropdown__item is-current" aria-current="page" href="e-sharp.html">E-Sharp</a></li>
               </ul>
             </li>
             <li class="menu__item">
@@ -75,11 +76,11 @@
       <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
         <ul class="mobile-menu__list">
           <li>
-            <a class="mobile-menu__item" aria-current="page" href="ux-ui-design.html">UX/UI Design</a>
+            <a class="mobile-menu__item" href="ux-ui-design.html">UX/UI Design</a>
             <div class="mobile-menu__sub">
               <a class="mobile-menu__sub-item" href="artura.html">Artura</a>
               <a class="mobile-menu__sub-item" href="snagie.html">Snagie</a>
-              <a class="mobile-menu__sub-item" href="e-sharp.html">E-Sharp</a>
+              <a class="mobile-menu__sub-item is-current" aria-current="page" href="e-sharp.html">E-Sharp</a>
             </div>
           </li>
           <li><a class="mobile-menu__item" href="graphic-design.html">Graphic Design</a></li>
@@ -103,99 +104,87 @@
         </div>
       </nav>
 
-      <main id="main" class="main">
-        <article id="artura" class="project-section" data-reveal>
-          <div class="project-section__main project-section__main--first project-section__main--with-showcase">
-            <div class="project-section__text">
-              <div class="project-section__title-block">
-                <header class="project-section__title">
-                  <h1 class="project-section__title-text">Artura</h1>
-                  <p class="project-section__subtitle">Mobile app</p>
-                </header>
-                <a class="btn-case-study" href="artura.html"><span class="btn-case-study__label">Case Study</span></a>
-              </div>
-              <p class="project-section__description">
-                Audio-tour mobile app that offers broad range of tours with planned audio and visual content for museums and art galleries.
-              </p>
-            </div>
-            <div class="project-section__media">
-              <div class="project-section__media-frame project-section--band-artura">
-                <video
-                  class="project-section__media-image"
-                  poster="assets/images/ux-ui/artura-mockup.png"
-                  muted
-                  loop
-                  autoplay
-                  playsinline
-                  preload="metadata"
-                  aria-label="Artura mobile app preview"
-                >
-                  <source src="assets/videos/artura.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </div>
+      <main id="main" class="main case-study">
+        <!-- Hero showcase banner -->
+        <section class="cs-banner" data-reveal>
+          <div class="cs-figure cs-placeholder" style="--ar: 1600 / 680;">
+            <span class="cs-placeholder__label">e-sharp-hero-showcase<span>1600 × 680</span></span>
           </div>
-          <picture>
-            <source type="image/webp" srcset="assets/images/ux-ui/artura-showcase.webp" />
-            <img class="project-section__showcase" src="assets/images/ux-ui/artura-showcase.png" alt="Artura mobile app — gallery showcase" />
-          </picture>
-        </article>
+        </section>
 
-        <article id="snagie" class="project-section project-section--text-narrow" data-reveal>
-          <div class="project-section__main project-section__main--bottom-compact">
-            <div class="project-section__text">
-              <div class="project-section__title-block">
-                <header class="project-section__title">
-                  <h2 class="project-section__title-text">Snagie</h2>
-                  <p class="project-section__subtitle">Web and Mobile App</p>
-                </header>
-                <a class="btn-case-study" href="snagie.html"><span class="btn-case-study__label">Case Study</span></a>
-              </div>
-              <p class="project-section__description">
-                Responsive web design and mobile app. Website for an animal shelter with detailed animal profiles and adoption information.
-              </p>
+        <!-- Intro -->
+        <section class="cs-intro" data-reveal>
+          <div class="cs-lead">
+            <header class="cs-lead__heading">
+              <h1 class="cs-heading">E-Sharp</h1>
+              <p class="cs-eyebrow">Learning platform</p>
+            </header>
+            <div class="cs-lead__body">
+              <p class="cs-body">The project focuses on course page design featuring a video player where users access music lessons.</p>
+              <p class="cs-body">The main concerns were to include easy navigation through the course with the current lesson in focus. User-friendly indications of progress and good accessibility features to improve self-paced learning.</p>
             </div>
-            <div class="project-section__media">
-              <picture>
-                <source type="image/webp" srcset="assets/images/ux-ui/snagie-devices.webp" />
-                <img class="project-section__media-image project-section__media-image--snagie" src="assets/images/ux-ui/snagie-devices.png" alt="Snagie web and mobile app shown across devices" />
-              </picture>
-            </div>
+            <!-- TODO: link to live prototype once available -->
+            <a class="btn-case-study" href="#"><span class="btn-case-study__label">View Prototype</span></a>
           </div>
-        </article>
+        </section>
 
-        <article id="e-sharp" class="project-section" data-reveal>
-          <div class="project-section__main project-section__main--with-showcase">
-            <div class="project-section__text">
-              <div class="project-section__title-block">
-                <header class="project-section__title">
-                  <h2 class="project-section__title-text">E-Sharp</h2>
-                  <p class="project-section__subtitle">Webpage Design</p>
-                </header>
-                <a class="btn-case-study" href="e-sharp.html"><span class="btn-case-study__label">Case Study</span></a>
-              </div>
-              <p class="project-section__description">Webpage design for an e-learning website focused on music courses.</p>
-            </div>
-            <div class="project-section__media">
-              <video
-                class="project-section__media-image project-section__media-image--e-sharp"
-                poster="assets/images/ux-ui/e-sharp-mockup.png"
-                muted
-                loop
-                autoplay
-                playsinline
-                preload="metadata"
-                aria-label="E-Sharp music course platform preview"
-              >
-                <source src="assets/videos/e-sharp.mp4" type="video/mp4" />
-              </video>
+        <!-- Challenge 01 -->
+        <section class="cs-feature-row" data-reveal>
+          <div class="cs-feature-row__text">
+            <p class="cs-number">01</p>
+            <h2 class="cs-heading">Easy course navigation</h2>
+            <p class="cs-body">A drop-down menu featuring various types of videos and exercises helps users track their progress and easily navigate through different sections.</p>
+          </div>
+          <div class="cs-feature-row__media">
+            <div class="cs-figure cs-placeholder" style="--ar: 709 / 554;">
+              <span class="cs-placeholder__label">e-sharp-challenge-01-navigation<span>709 × 554</span></span>
             </div>
           </div>
-          <picture>
-            <source type="image/webp" srcset="assets/images/ux-ui/e-sharp-showcase.webp" />
-            <img class="project-section__showcase" src="assets/images/ux-ui/e-sharp-showcase.png" alt="E-Sharp full-page showcase" />
-          </picture>
-        </article>
+        </section>
+
+        <!-- Challenges 02 & 03 (gradient band) -->
+        <section class="cs-band cs-band--esharp" data-reveal>
+          <div class="cs-feature-row">
+            <div class="cs-feature-row__text">
+              <p class="cs-number">02</p>
+              <h2 class="cs-heading">Video actions and progress</h2>
+              <p class="cs-body">Buttons for easy navigation between videos, enabling users to progress through their learning journey without any interruptions.</p>
+            </div>
+            <div class="cs-feature-row__media">
+              <div class="cs-figure cs-placeholder" style="--ar: 709 / 508;">
+                <span class="cs-placeholder__label">e-sharp-challenge-02-video-actions<span>709 × 508</span></span>
+              </div>
+            </div>
+          </div>
+          <div class="cs-feature-row">
+            <div class="cs-feature-row__text">
+              <p class="cs-number">03</p>
+              <h2 class="cs-heading">Transcript and language accessibility</h2>
+              <p class="cs-body">Language selection for video transcripts and subtitles enhances accessibility, allowing a broader audience to engage with the content in their preferred language.</p>
+            </div>
+            <div class="cs-feature-row__media">
+              <div class="cs-figure cs-placeholder" style="--ar: 709 / 379;">
+                <span class="cs-placeholder__label">e-sharp-challenge-03-transcript<span>709 × 379</span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Challenge 04 -->
+        <section class="cs-section cs-statement" data-reveal>
+          <div class="cs-statement__inner">
+            <p class="cs-number">04</p>
+            <h2 class="cs-heading">Responsive layout</h2>
+            <p class="cs-body">A responsive layout emphasizes the video and transcript, ensuring a clean, distraction-free layout that keeps the focus on the content.</p>
+          </div>
+        </section>
+
+        <!-- Closing showcase -->
+        <section class="cs-banner cs-banner--inset" data-reveal>
+          <div class="cs-figure cs-placeholder" style="--ar: 1293 / 613;">
+            <span class="cs-placeholder__label">e-sharp-bottom-showcase<span>1293 × 613</span></span>
+          </div>
+        </section>
       </main>
     </div>
 

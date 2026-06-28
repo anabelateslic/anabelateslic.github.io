@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Artura — UX/UI Case Study — Anabela Teslić</title>
+    <meta name="description" content="Artura case study by Anabela Teslić — an audio-tour mobile app making museums and art galleries more accessible through multimedia-guided tours." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/case-study.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body class="page-ux-ui page-case-study">
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="logo-mark logo-mark--mobile" href="index.html" aria-label="Anabela Teslić — Home">Anabela Teslić</a>
+        <button
+          class="menu-trigger"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open navigation"
+          data-menu-trigger
+        ></button>
+      </header>
+
+      <aside class="sidebar" aria-label="Primary">
+        <a class="logo-mark logo-mark--desktop sidebar__brand" href="index.html" aria-label="Anabela Teslić — Home">
+          <p>Anabela</p>
+          <p>Teslić</p>
+        </a>
+        <nav class="sidebar__menu" aria-label="Pages">
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu-button" href="ux-ui-design.html"><span class="menu-button__label">UX/UI Design</span></a>
+              <ul class="menu-dropdown__items">
+                <li><a class="menu-dropdown__item is-current" aria-current="page" href="artura.html">Artura</a></li>
+                <li><a class="menu-dropdown__item" href="snagie.html">Snagie</a></li>
+                <li><a class="menu-dropdown__item" href="e-sharp.html">E-Sharp</a></li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              <a class="menu-button" href="graphic-design.html"><span class="menu-button__label">Graphic Design</span></a>
+            </li>
+            <li class="menu__item">
+              <a class="menu-button" href="fine-arts.html"><span class="menu-button__label">Fine Arts</span></a>
+            </li>
+            <li class="menu__item">
+              <a class="menu-button" href="about-me.html"><span class="menu-button__label">About Me</span></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="sidebar__footer">
+          <div class="sidebar__contact">
+            <ul class="social-icons" aria-label="Social links">
+              <li>
+                <a class="social-icons__link" href="https://www.linkedin.com/in/anabela-tesli%C4%87-7952a528a/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.74 17.74" aria-hidden="true"><path fill-rule="evenodd" d="M14.62,0H3.13A3.13,3.13,0,0,0,0,3.13V14.62a3.13,3.13,0,0,0,3.13,3.12H14.62a3.12,3.12,0,0,0,3.12-3.12V3.13A3.13,3.13,0,0,0,14.62,0ZM5.88,14.34H3.62V7.05H5.88ZM4.74,6.09A1.35,1.35,0,1,1,6.07,4.75,1.34,1.34,0,0,1,4.74,6.09Zm9.6,8.25H12.09V10.51c0-1-.4-1.63-1.23-1.63s-1.37.61-1.37,1.63v3.83H7.32V7.05H9.49V8a2.54,2.54,0,0,1,2.2-1.2c1.54,0,2.65.94,2.65,2.89Z"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="social-icons__link" href="https://www.behance.net/anabelateslic" target="_blank" rel="noopener" aria-label="Behance">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.74 17.74" aria-hidden="true"><path fill-rule="evenodd" d="M6.26,9.26H4.5v2.42H6.23a1.63,1.63,0,0,0,.45-.06,1.11,1.11,0,0,0,.38-.18.92.92,0,0,0,.27-.36,1.28,1.28,0,0,0,.1-.56,1.29,1.29,0,0,0-.32-1A1.23,1.23,0,0,0,6.26,9.26Z"/><path fill-rule="evenodd" d="M6.86,7.71a1,1,0,0,0,.28-.79,1.23,1.23,0,0,0-.09-.51.88.88,0,0,0-.26-.31A1,1,0,0,0,6.43,6,1.84,1.84,0,0,0,6,5.9H4.5V8H6.14A1.08,1.08,0,0,0,6.86,7.71Z"/><polygon fill-rule="evenodd" points="6.24 11.68 6.23 11.68 6.24 11.69 6.24 11.68"/><path fill-rule="evenodd" d="M14.62,0H3.13A3.13,3.13,0,0,0,0,3.13V14.62a3.13,3.13,0,0,0,3.13,3.12H14.62a3.12,3.12,0,0,0,3.12-3.12V3.13A3.13,3.13,0,0,0,14.62,0ZM10.7,5.12h3V6h-3ZM8.83,11.79a2.25,2.25,0,0,1-.58.79,2.37,2.37,0,0,1-.84.46,3.43,3.43,0,0,1-1,.14H2.87V4.42H6.35a4.08,4.08,0,0,1,1,.11,2.18,2.18,0,0,1,.75.36,1.78,1.78,0,0,1,.48.67,2.81,2.81,0,0,1,.17,1,2.22,2.22,0,0,1-.26,1.11,2,2,0,0,1-.75.72,1.77,1.77,0,0,1,1,.82,2.73,2.73,0,0,1,.34,1.41A2.88,2.88,0,0,1,8.83,11.79Zm2.55-.14h0a1.16,1.16,0,0,0,1,.38,1.19,1.19,0,0,0,.76-.26,1.13,1.13,0,0,0,.39-.57h1.29a3,3,0,0,1-.95,1.64,2.43,2.43,0,0,1-1.54.49,2.64,2.64,0,0,1-1.14-.24,2.47,2.47,0,0,1-.86-.68,3.23,3.23,0,0,1-.55-1.06A4.84,4.84,0,0,1,9.53,10a4.36,4.36,0,0,1,.2-1.33,3.07,3.07,0,0,1,.56-1.06,2.66,2.66,0,0,1,.86-.71,2.46,2.46,0,0,1,1.12-.25A2.22,2.22,0,0,1,13.46,7a2.47,2.47,0,0,1,.83.84A3.68,3.68,0,0,1,14.76,9a5.45,5.45,0,0,1,.11,1.41H11A1.92,1.92,0,0,0,11.38,11.65Z"/><path fill-rule="evenodd" d="M13.05,8.32A1,1,0,0,0,12.22,8a1.06,1.06,0,0,0-.58.14,1.24,1.24,0,0,0-.37.35,1.41,1.41,0,0,0-.2.45,2.25,2.25,0,0,0-.06.41H13.4a2,2,0,0,0-.34-1Z"/></svg>
+                </a>
+              </li>
+            </ul>
+            <a class="email-link" href="mailto:anabela.teslic@gmail.com">anabela.teslic@gmail.com</a>
+          </div>
+          <span class="sidebar__divider" aria-hidden="true"></span>
+        </div>
+      </aside>
+
+      <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
+        <ul class="mobile-menu__list">
+          <li>
+            <a class="mobile-menu__item" href="ux-ui-design.html">UX/UI Design</a>
+            <div class="mobile-menu__sub">
+              <a class="mobile-menu__sub-item is-current" aria-current="page" href="artura.html">Artura</a>
+              <a class="mobile-menu__sub-item" href="snagie.html">Snagie</a>
+              <a class="mobile-menu__sub-item" href="e-sharp.html">E-Sharp</a>
+            </div>
+          </li>
+          <li><a class="mobile-menu__item" href="graphic-design.html">Graphic Design</a></li>
+          <li><a class="mobile-menu__item" href="fine-arts.html">Fine Arts</a></li>
+          <li><a class="mobile-menu__item" href="about-me.html">About Me</a></li>
+        </ul>
+        <div class="mobile-menu__contact">
+          <ul class="social-icons" aria-label="Social links">
+            <li>
+              <a class="social-icons__link" href="https://www.linkedin.com/in/anabela-tesli%C4%87-7952a528a/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.74 17.74" aria-hidden="true"><path fill-rule="evenodd" d="M14.62,0H3.13A3.13,3.13,0,0,0,0,3.13V14.62a3.13,3.13,0,0,0,3.13,3.12H14.62a3.12,3.12,0,0,0,3.12-3.12V3.13A3.13,3.13,0,0,0,14.62,0ZM5.88,14.34H3.62V7.05H5.88ZM4.74,6.09A1.35,1.35,0,1,1,6.07,4.75,1.34,1.34,0,0,1,4.74,6.09Zm9.6,8.25H12.09V10.51c0-1-.4-1.63-1.23-1.63s-1.37.61-1.37,1.63v3.83H7.32V7.05H9.49V8a2.54,2.54,0,0,1,2.2-1.2c1.54,0,2.65.94,2.65,2.89Z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-icons__link" href="https://www.behance.net/anabelateslic" target="_blank" rel="noopener" aria-label="Behance">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.74 17.74" aria-hidden="true"><path fill-rule="evenodd" d="M6.26,9.26H4.5v2.42H6.23a1.63,1.63,0,0,0,.45-.06,1.11,1.11,0,0,0,.38-.18.92.92,0,0,0,.27-.36,1.28,1.28,0,0,0,.1-.56,1.29,1.29,0,0,0-.32-1A1.23,1.23,0,0,0,6.26,9.26Z"/><path fill-rule="evenodd" d="M6.86,7.71a1,1,0,0,0,.28-.79,1.23,1.23,0,0,0-.09-.51.88.88,0,0,0-.26-.31A1,1,0,0,0,6.43,6,1.84,1.84,0,0,0,6,5.9H4.5V8H6.14A1.08,1.08,0,0,0,6.86,7.71Z"/><polygon fill-rule="evenodd" points="6.24 11.68 6.23 11.68 6.24 11.69 6.24 11.68"/><path fill-rule="evenodd" d="M14.62,0H3.13A3.13,3.13,0,0,0,0,3.13V14.62a3.13,3.13,0,0,0,3.13,3.12H14.62a3.12,3.12,0,0,0,3.12-3.12V3.13A3.13,3.13,0,0,0,14.62,0ZM10.7,5.12h3V6h-3ZM8.83,11.79a2.25,2.25,0,0,1-.58.79,2.37,2.37,0,0,1-.84.46,3.43,3.43,0,0,1-1,.14H2.87V4.42H6.35a4.08,4.08,0,0,1,1,.11,2.18,2.18,0,0,1,.75.36,1.78,1.78,0,0,1,.48.67,2.81,2.81,0,0,1,.17,1,2.22,2.22,0,0,1-.26,1.11,2,2,0,0,1-.75.72,1.77,1.77,0,0,1,1,.82,2.73,2.73,0,0,1,.34,1.41A2.88,2.88,0,0,1,8.83,11.79Zm2.55-.14h0a1.16,1.16,0,0,0,1,.38,1.19,1.19,0,0,0,.76-.26,1.13,1.13,0,0,0,.39-.57h1.29a3,3,0,0,1-.95,1.64,2.43,2.43,0,0,1-1.54.49,2.64,2.64,0,0,1-1.14-.24,2.47,2.47,0,0,1-.86-.68,3.23,3.23,0,0,1-.55-1.06A4.84,4.84,0,0,1,9.53,10a4.36,4.36,0,0,1,.2-1.33,3.07,3.07,0,0,1,.56-1.06,2.66,2.66,0,0,1,.86-.71,2.46,2.46,0,0,1,1.12-.25A2.22,2.22,0,0,1,13.46,7a2.47,2.47,0,0,1,.83.84A3.68,3.68,0,0,1,14.76,9a5.45,5.45,0,0,1,.11,1.41H11A1.92,1.92,0,0,0,11.38,11.65Z"/><path fill-rule="evenodd" d="M13.05,8.32A1,1,0,0,0,12.22,8a1.06,1.06,0,0,0-.58.14,1.24,1.24,0,0,0-.37.35,1.41,1.41,0,0,0-.2.45,2.25,2.25,0,0,0-.06.41H13.4a2,2,0,0,0-.34-1Z"/></svg>
+              </a>
+            </li>
+          </ul>
+          <a class="email-link" href="mailto:anabela.teslic@gmail.com">anabela.teslic@gmail.com</a>
+        </div>
+      </nav>
+
+      <main id="main" class="main case-study">
+        <!-- Hero -->
+        <section class="cs-hero" data-reveal>
+          <div class="cs-lead">
+            <header class="cs-lead__heading">
+              <h1 class="cs-heading">Artura</h1>
+              <p class="cs-eyebrow">Mobile app</p>
+            </header>
+            <div class="cs-lead__body">
+              <p class="cs-body">Artura is an audio-tour app offering diverse, multimedia-guided tours for museums and art galleries. It connects users with information on artists, artworks, and exhibitions to make art more accessible and enrich the cultural experience.</p>
+            </div>
+            <!-- TODO: link to project file / prototype once available -->
+            <a class="btn-case-study" href="#"><span class="btn-case-study__label">Project File</span></a>
+          </div>
+          <div class="cs-hero__media">
+            <div class="cs-figure cs-placeholder" style="--ar: 716 / 619;">
+              <span class="cs-placeholder__label">artura-hero-mockup<span>716 × 619</span></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Project overview -->
+        <section class="cs-overview" data-reveal>
+          <div class="cs-overview__block">
+            <h2 class="cs-subheading">Project Overview</h2>
+            <p class="cs-body">Conducting interviews, paper and digital wireframing, low and high-fidelity prototyping, conducting usability studies, accounting for accessibility, and iterating on designs.</p>
+          </div>
+          <div class="cs-overview__block">
+            <h2 class="cs-subheading">Project Goal</h2>
+            <p class="cs-body">Design an app with audio tours that let people interact at their own pace, along with engaging information and content for people to learn about art.</p>
+          </div>
+        </section>
+
+        <!-- User research -->
+        <section class="cs-research" data-reveal>
+          <div class="cs-research__intro">
+            <h2 class="cs-heading">User Research</h2>
+            <p class="cs-body">User interviews revealed that art and travel enthusiasts often avoid galleries due to limited information and a lack of personalized tours.</p>
+            <p class="cs-body">The research also highlighted broader challenges like accessibility, time constraints, and limited learning resources.</p>
+          </div>
+          <div class="cs-research__persona">
+            <div class="cs-persona">
+              <div class="cs-persona__head">
+                <div class="cs-figure cs-placeholder" style="--ar: 1 / 1;">
+                  <span class="cs-placeholder__label">artura-persona-diana<span>215 × 215</span></span>
+                </div>
+                <div class="cs-persona__meta">
+                  <h3 class="cs-subheading cs-persona__name">Diana Roland</h3>
+                  <ul class="cs-persona__details">
+                    <li class="cs-body muted">Age: 40</li>
+                    <li class="cs-body muted">Education: MSW</li>
+                    <li class="cs-body muted">Hometown: Zagreb, Croatia</li>
+                    <li class="cs-body muted">Family: Husband and two children</li>
+                    <li class="cs-body muted">Occupation: Social worker</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cs-persona__group">
+                <h3 class="cs-subheading">Goals</h3>
+                <ul class="cs-persona__list">
+                  <li class="cs-body">Volunteer at the Community Arts Center.</li>
+                  <li class="cs-body">Help and improve the well-being of individuals.</li>
+                  <li class="cs-body">Create a positive environment for people to express themselves.</li>
+                </ul>
+              </div>
+              <div class="cs-persona__group">
+                <h3 class="cs-subheading">Frustrations</h3>
+                <ul class="cs-persona__list">
+                  <li class="cs-body">“Balancing work, family time, and volunteering can be exhausting.”</li>
+                  <li class="cs-body">“When looking at art in galleries, it can be challenging to find information.”</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Key challenges -->
+        <section class="cs-split" data-reveal>
+          <div class="cs-split__aside">
+            <h2 class="cs-heading">Key Challenges</h2>
+          </div>
+          <div class="cs-split__content">
+            <div class="cs-numbered-list">
+              <div class="cs-numbered">
+                <p class="cs-number">01</p>
+                <div class="cs-numbered__text">
+                  <h3 class="cs-subheading">Accessibility</h3>
+                  <p class="cs-body">People with impairments often struggle with reading small captions in galleries or information that is not audible.</p>
+                </div>
+              </div>
+              <div class="cs-numbered">
+                <p class="cs-number">02</p>
+                <div class="cs-numbered__text">
+                  <h3 class="cs-subheading">Time</h3>
+                  <p class="cs-body">Individuals find it difficult to join gallery tour groups due to a lack of free time.</p>
+                </div>
+              </div>
+              <div class="cs-numbered">
+                <p class="cs-number">03</p>
+                <div class="cs-numbered__text">
+                  <h3 class="cs-subheading">Content availability</h3>
+                  <p class="cs-body">Information about artworks and artists is not available for users to read at home or outside of art galleries.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Challenge solution (colour band) -->
+        <section class="cs-band cs-band--artura" data-reveal>
+          <div class="cs-solution">
+            <p class="cs-body">Access to the audio transcript and language selection.</p>
+            <div class="cs-figure cs-placeholder" style="--ar: 280 / 565;">
+              <span class="cs-placeholder__label">artura-solution-screen-1<span>280 × 565</span></span>
+            </div>
+            <div class="cs-figure cs-placeholder" style="--ar: 280 / 577;">
+              <span class="cs-placeholder__label">artura-solution-screen-2<span>280 × 577</span></span>
+            </div>
+            <p class="cs-body">Map button for easier gallery navigation and like button to bookmark items for future access.</p>
+          </div>
+        </section>
+
+        <!-- Paper wireframe banner -->
+        <section class="cs-banner cs-banner--overlay" data-reveal>
+          <div class="cs-figure cs-placeholder" style="--ar: 1600 / 504;">
+            <span class="cs-placeholder__label">artura-paper-wireframe<span>1600 × 504</span></span>
+          </div>
+        </section>
+
+        <!-- Starting the design -->
+        <section class="cs-feature-row cs-feature-row--media-bottom" data-reveal>
+          <div class="cs-feature-row__text">
+            <h2 class="cs-heading">Starting the Design</h2>
+            <h3 class="cs-subheading">Paper Wireframe</h3>
+            <p class="cs-body">Making iterations of each screen of the app on paper ensured that elements that made it to the digital wireframe would be well organized with content that addresses user pain points.</p>
+            <p class="cs-body">I emphasized images and content search for easier flow through app.</p>
+            <h3 class="cs-subheading">Low-Fidelity Prototype</h3>
+          </div>
+          <div class="cs-feature-row__media">
+            <div class="cs-figure cs-placeholder" style="--ar: 700 / 748;">
+              <span class="cs-placeholder__label">artura-lofi-prototype<span>700 × 748</span></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- User testing -->
+        <section class="cs-panel-duo" data-reveal>
+          <div class="cs-panel-duo__panel">
+            <h2 class="cs-heading">User testing results</h2>
+            <div class="cs-lead__body">
+              <p class="cs-body">I conducted two rounds of usability studies. Results from the first study helped me iterate and build from wireframes to mockups.</p>
+              <p class="cs-body">In the second study on high-fidelity prototype, findings showed parts and elements that needed to be improved and refined.</p>
+            </div>
+          </div>
+          <div class="cs-panel-duo__content">
+            <div class="cs-numbered-list">
+              <div class="cs-numbered">
+                <p class="cs-number">01</p>
+                <div class="cs-numbered__text">
+                  <h3 class="cs-subheading">Flow</h3>
+                  <p class="cs-body">Users want an easier flow through the app.</p>
+                </div>
+              </div>
+              <div class="cs-numbered">
+                <p class="cs-number">02</p>
+                <div class="cs-numbered__text">
+                  <h3 class="cs-subheading">Button hierarchy</h3>
+                  <p class="cs-body">Users find the introduction and start tour buttons confusing.</p>
+                </div>
+              </div>
+              <div class="cs-numbered">
+                <p class="cs-number">03</p>
+                <div class="cs-numbered__text">
+                  <h3 class="cs-subheading">Search page</h3>
+                  <p class="cs-body">The artist search page has an excessive amount of information.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testing changes -->
+        <section class="cs-changes" data-reveal>
+          <div class="cs-changes__col cs-changes__col--panel">
+            <div class="cs-changes__text">
+              <h2 class="cs-heading">Changes</h2>
+              <div class="cs-changes__list">
+                <p class="cs-body">Bottom navigation bar for easier user flow.</p>
+                <p class="cs-body">Improved button hierarchy with better placement and contrast.</p>
+              </div>
+            </div>
+            <div class="cs-figure cs-placeholder" style="--ar: 476 / 600;">
+              <span class="cs-placeholder__label">artura-changes-mockup-left<span>476 × 600</span></span>
+            </div>
+          </div>
+          <div class="cs-changes__col cs-changes__col--media">
+            <div class="cs-figure cs-placeholder" style="--ar: 556 / 600;">
+              <span class="cs-placeholder__label">artura-changes-mockup-right<span>556 × 600</span></span>
+            </div>
+            <p class="cs-body">Artist information was reduced to enhance visibility.</p>
+          </div>
+        </section>
+
+        <!-- Mockup and high-fidelity -->
+        <section class="cs-final-band" data-reveal>
+          <div class="cs-final-band__intro">
+            <h2 class="cs-heading">Mockups and<br />High-Fidelity Prototype</h2>
+            <div class="cs-lead__body">
+              <p class="cs-body">All insights gained through user testing helped me improve elements and user flow for the final high-fidelity app prototype.</p>
+              <p class="cs-body">Take a look and test it out.</p>
+            </div>
+            <!-- TODO: link to live prototype once available -->
+            <a class="btn-case-study" href="#"><span class="btn-case-study__label">View Prototype</span></a>
+          </div>
+          <div class="cs-final-band__media">
+            <div class="cs-figure cs-placeholder" style="--ar: 297 / 551;">
+              <span class="cs-placeholder__label">artura-highfidelity-mockup<span>297 × 551</span></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Closing showcase -->
+        <section class="cs-banner" data-reveal>
+          <div class="cs-figure cs-placeholder" style="--ar: 1600 / 1510;">
+            <span class="cs-placeholder__label">artura-showcase-image<span>1600 × 1510</span></span>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <noscript>
+      <style>
+        [data-reveal] { opacity: 1 !important; transform: none !important; }
+      </style>
+    </noscript>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

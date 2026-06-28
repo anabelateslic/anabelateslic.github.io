@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Unbounded:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Unbounded:wght@300;400;500;600&display=swap");
 
 *,
 *::before,
@@ -75,6 +75,7 @@ ul {
   --color-primary: #c4502a;
   --color-primary-container: #ececec;
   --color-on-primary: #ffffff;
+  --color-number: #f0d4c8;
 
   --color-band-artura: #9c2541;
   --color-band-amz: #d5ba6d;

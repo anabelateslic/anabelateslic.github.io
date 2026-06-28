@@ -1,0 +1,646 @@
+/* ==========================================================================
+   Case study pages — UX/UI deep-dives (Artura, Snagie, E-Sharp)
+   Desktop-first layout. Mobile is a functional fallback for now (full polish
+   to follow). Composes with the shared tokens in base.css and the .t-* /
+   .btn-case-study components.
+   ========================================================================== */
+
+.case-study {
+  /* content clears the fixed sidebar, same convention as .project-section */
+  --cs-inset-start: calc(var(--sidebar-width) + var(--page-gutter-left));
+  --cs-inset-end: clamp(40px, 5vw, 80px);
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Typography
+   -------------------------------------------------------------------------- */
+.cs-heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(28px, 2.93vw, 40px);
+  line-height: 1.1;
+  letter-spacing: 0;
+  color: var(--color-on-surface);
+  margin: 0;
+}
+
+.cs-subheading {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--color-on-surface);
+  margin: 0;
+}
+
+.cs-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-on-surface-muted);
+  margin: 0;
+}
+
+.cs-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0.06em;
+  color: var(--color-on-surface);
+  margin: 0;
+}
+
+.cs-number {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 1;
+  color: var(--color-number);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Figures & image placeholders
+   (placeholder divs stand in until real assets are supplied)
+   -------------------------------------------------------------------------- */
+.cs-figure {
+  width: 100%;
+}
+
+.cs-figure img,
+.cs-figure picture {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cs-placeholder {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--ar, 1 / 1);
+  display: grid;
+  place-items: center;
+  background-color: var(--color-surface-variant);
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 12px,
+    rgba(0, 0, 0, 0.045) 12px,
+    rgba(0, 0, 0, 0.045) 24px
+  );
+  border: 1px dashed var(--color-on-surface-muted);
+  color: var(--color-on-surface-muted);
+  text-align: center;
+  overflow: hidden;
+}
+
+.cs-placeholder__label {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: var(--space-4);
+}
+
+.cs-placeholder__label span {
+  display: block;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.04em;
+  opacity: 0.8;
+}
+
+/* --------------------------------------------------------------------------
+   Full-bleed / banner media
+   -------------------------------------------------------------------------- */
+.cs-banner {
+  width: 100%;
+}
+
+.cs-banner--inset {
+  width: calc(100% - var(--cs-inset-start));
+  margin-inline-start: var(--cs-inset-start);
+}
+
+.cs-banner--overlay .cs-figure img {
+  filter: brightness(0.85);
+}
+
+/* --------------------------------------------------------------------------
+   Lead block (title + eyebrow + body + CTA) — used by hero and intro
+   -------------------------------------------------------------------------- */
+.cs-lead {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  max-width: 521px;
+}
+
+.cs-lead__heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.cs-lead__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* Hero: lead text + side image */
+.cs-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 492fr) minmax(0, 716fr);
+  gap: clamp(40px, 5vw, 89px);
+  align-items: center;
+  padding-inline-start: var(--cs-inset-start);
+  padding-inline-end: var(--cs-inset-end);
+  padding-block: clamp(48px, 6vw, 80px);
+}
+
+.cs-hero__media {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Intro: lead text only, vertically centred */
+.cs-intro {
+  display: flex;
+  align-items: center;
+  min-height: clamp(420px, 44vw, 560px);
+  padding-inline-start: var(--cs-inset-start);
+  padding-inline-end: var(--cs-inset-end);
+  padding-block: clamp(48px, 6vw, 80px);
+}
+
+/* --------------------------------------------------------------------------
+   Overview: indented stack of heading + body blocks
+   -------------------------------------------------------------------------- */
+.cs-overview {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(48px, 6vw, 83px);
+  max-width: calc(521px + var(--cs-inset-start));
+  padding-inline-start: var(--cs-inset-start);
+  padding-inline-end: var(--cs-inset-end);
+  padding-block: clamp(64px, 7vw, 80px);
+}
+
+.cs-overview__block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* --------------------------------------------------------------------------
+   Generic statement section (single inset text column)
+   -------------------------------------------------------------------------- */
+.cs-section {
+  padding-inline-start: var(--cs-inset-start);
+  padding-inline-end: var(--cs-inset-end);
+  padding-block: clamp(72px, 9vw, 140px);
+}
+
+.cs-statement__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 436px;
+}
+
+/* --------------------------------------------------------------------------
+   Split: aside (heading) + content (list / persona / figure)
+   831 / 769 proportions from the source frames
+   -------------------------------------------------------------------------- */
+.cs-split {
+  display: grid;
+  grid-template-columns: minmax(0, 831fr) minmax(0, 769fr);
+  align-items: start;
+}
+
+.cs-split__aside {
+  padding-inline-start: var(--cs-inset-start);
+  padding-inline-end: var(--space-12);
+  padding-block-start: clamp(80px, 12vw, 200px);
+}
+
+.cs-split__content {
+  padding-inline-end: var(--cs-inset-end);
+  padding-block: clamp(64px, 8vw, 120px);
+}
+
+/* Numbered challenge / insight list */
+.cs-numbered-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(36px, 4vw, 60px);
+}
+
+.cs-numbered {
+  display: grid;
+  grid-template-columns: minmax(64px, auto) minmax(0, 476px);
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.cs-numbered__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* --------------------------------------------------------------------------
+   Feature row: text column + image column (E-Sharp challenges, Artura design)
+   -------------------------------------------------------------------------- */
+.cs-feature-row {
+  display: grid;
+  grid-template-columns: minmax(0, 831fr) minmax(0, 769fr);
+  align-items: center;
+}
+
+.cs-feature-row__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding-inline-start: var(--cs-inset-start);
+  padding-inline-end: var(--space-16);
+  padding-block: clamp(64px, 8vw, 120px);
+}
+
+.cs-feature-row__media {
+  padding-inline-start: var(--space-15);
+  padding-inline-end: var(--cs-inset-end);
+  padding-block: clamp(48px, 6vw, 94px);
+}
+
+.cs-feature-row--media-bottom {
+  align-items: end;
+}
+
+.cs-feature-row--media-top {
+  align-items: start;
+}
+
+/* --------------------------------------------------------------------------
+   User research: colour panel (intro) + persona card
+   -------------------------------------------------------------------------- */
+.cs-research {
+  display: grid;
+  grid-template-columns: minmax(0, 831fr) minmax(0, 769fr);
+  align-items: stretch;
+}
+
+.cs-research__intro {
+  background: var(--color-surface-variant);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding-inline-start: var(--cs-inset-start);
+  padding-inline-end: var(--space-16);
+  padding-block: clamp(80px, 9vw, 140px);
+}
+
+.cs-research__persona {
+  padding-inline-start: var(--space-15);
+  padding-inline-end: var(--cs-inset-end);
+  padding-block: clamp(64px, 8vw, 120px);
+}
+
+.cs-persona {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  max-width: 530px;
+}
+
+.cs-persona__head {
+  display: grid;
+  grid-template-columns: 215px minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: end;
+}
+
+.cs-persona__meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.cs-persona__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cs-persona__group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.cs-persona__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* --------------------------------------------------------------------------
+   Full-bleed colour bands
+   -------------------------------------------------------------------------- */
+.cs-band {
+  width: 100%;
+}
+
+.cs-band--artura {
+  background: var(--color-band-artura);
+}
+
+.cs-band--esharp {
+  background: linear-gradient(142.58deg, #2459cb 9.31%, #d341ca 96.77%);
+}
+
+.cs-band--snagie {
+  background: linear-gradient(137.86deg, #0277ac 3.58%, #489fc2 50.38%, #b3dae7 90.49%);
+}
+
+.cs-band--artura :is(.cs-heading, .cs-subheading, .cs-body),
+.cs-band--esharp :is(.cs-heading, .cs-subheading, .cs-body),
+.cs-band--snagie :is(.cs-heading, .cs-subheading, .cs-body) {
+  color: var(--color-surface);
+}
+
+/* E-Sharp gradient band keeps dark numerals per the design */
+.cs-band--esharp .cs-number {
+  color: var(--color-on-surface);
+}
+
+/* Artura "challenge solution" row: caption | screen | screen | caption */
+.cs-solution {
+  display: grid;
+  grid-template-columns: minmax(0, 265fr) minmax(0, 300fr) minmax(0, 300fr) minmax(0, 271fr);
+  gap: clamp(24px, 3vw, 56px);
+  align-items: center;
+  padding-inline-start: calc(var(--sidebar-width) + var(--space-15));
+  padding-inline-end: var(--cs-inset-end);
+  padding-block: clamp(72px, 9vw, 120px);
+}
+
+/* Snagie "challenge solution": caption + wide screenshot rows on a gradient band */
+.cs-solution-stack {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(48px, 6vw, 100px);
+  padding-inline-start: calc(var(--sidebar-width) + var(--space-15));
+  padding-inline-end: var(--cs-inset-end);
+  padding-block: clamp(80px, 10vw, 120px);
+}
+
+.cs-solution-row {
+  display: grid;
+  grid-template-columns: minmax(0, 515fr) minmax(0, 685fr);
+  gap: clamp(24px, 3vw, 56px);
+  align-items: center;
+}
+
+.cs-solution-row__caption {
+  max-width: 350px;
+}
+
+/* --------------------------------------------------------------------------
+   Panel duo: colour panel (left) + content (right) — "User testing" sections
+   -------------------------------------------------------------------------- */
+.cs-panel-duo {
+  display: grid;
+  grid-template-columns: minmax(0, 831fr) minmax(0, 769fr);
+  align-items: stretch;
+}
+
+.cs-panel-duo__panel {
+  background: var(--color-surface-variant);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding-inline-start: var(--cs-inset-start);
+  padding-inline-end: var(--space-16);
+  padding-block: clamp(64px, 8vw, 140px);
+}
+
+.cs-panel-duo__content {
+  padding-inline-start: var(--space-15);
+  padding-inline-end: var(--cs-inset-end);
+  padding-block: clamp(96px, 12vw, 200px) clamp(40px, 5vw, 48px);
+}
+
+/* --------------------------------------------------------------------------
+   "Testing changes": left colour panel (text + image) + right media (images + caption)
+   -------------------------------------------------------------------------- */
+.cs-changes {
+  display: grid;
+  grid-template-columns: minmax(0, 831fr) minmax(0, 769fr);
+  align-items: end;
+}
+
+.cs-changes__col {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(48px, 6vw, 100px);
+}
+
+.cs-changes__col--panel {
+  background: var(--color-surface-variant);
+  padding-inline-start: var(--cs-inset-start);
+  padding-inline-end: var(--space-16);
+  padding-block: clamp(64px, 8vw, 160px) clamp(48px, 6vw, 80px);
+}
+
+.cs-changes__col--media {
+  padding-inline-start: var(--space-15);
+  padding-inline-end: var(--cs-inset-end);
+  padding-block: clamp(48px, 6vw, 140px) clamp(40px, 5vw, 48px);
+}
+
+.cs-changes__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.cs-changes__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* --------------------------------------------------------------------------
+   Final mockup duo (Snagie): intro + images (left) + tall image (right)
+   -------------------------------------------------------------------------- */
+.cs-final {
+  display: grid;
+  grid-template-columns: minmax(0, 831fr) minmax(0, 769fr);
+  align-items: end;
+}
+
+.cs-final__col {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(48px, 6vw, 100px);
+}
+
+.cs-final__col--left {
+  padding-inline-start: var(--cs-inset-start);
+  padding-inline-end: var(--space-16);
+  padding-block: clamp(64px, 8vw, 160px) clamp(48px, 6vw, 80px);
+}
+
+.cs-final__col--right {
+  padding-inline-start: var(--space-15);
+  padding-inline-end: var(--cs-inset-end);
+  padding-block: clamp(48px, 6vw, 140px) clamp(40px, 5vw, 48px);
+}
+
+.cs-final__intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  max-width: 436px;
+}
+
+.cs-final__images {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  max-width: 476px;
+}
+
+/* --------------------------------------------------------------------------
+   Mockup band (Artura): text + CTA (left) + colour band with image (right)
+   -------------------------------------------------------------------------- */
+.cs-final-band {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 500px);
+  gap: clamp(40px, 5vw, 94px);
+  align-items: center;
+  padding-inline-start: var(--cs-inset-start);
+  padding-block: clamp(80px, 11vw, 140px);
+}
+
+.cs-final-band__intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  max-width: 492px;
+}
+
+.cs-final-band__media {
+  background: var(--color-band-artura);
+  padding: clamp(20px, 2.2vw, 33px) 0 clamp(20px, 2.2vw, 33px) clamp(20px, 2.2vw, 33px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.cs-final-band__media .cs-figure {
+  width: 100%;
+  max-width: 297px;
+  margin-inline-start: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile fallback — keeps pages usable until the dedicated mobile pass.
+   Sidebar is hidden < 900px, so collapse the sidebar inset and stack columns.
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .case-study {
+    --cs-inset-start: var(--mobile-gutter);
+    --cs-inset-end: var(--mobile-gutter);
+  }
+
+  .cs-hero,
+  .cs-split,
+  .cs-research,
+  .cs-feature-row,
+  .cs-panel-duo,
+  .cs-changes,
+  .cs-final,
+  .cs-final-band,
+  .cs-solution-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cs-split__aside,
+  .cs-split__content,
+  .cs-feature-row__text,
+  .cs-feature-row__media,
+  .cs-research__intro,
+  .cs-research__persona,
+  .cs-panel-duo__panel,
+  .cs-panel-duo__content,
+  .cs-changes__col,
+  .cs-final__col,
+  .cs-final-band__intro,
+  .cs-final-band__media,
+  .cs-solution-stack {
+    padding-inline: var(--mobile-gutter);
+    padding-block: var(--space-12);
+  }
+
+  .cs-feature-row__media,
+  .cs-research__persona,
+  .cs-panel-duo__content {
+    padding-block-start: 0;
+  }
+
+  .cs-final__images,
+  .cs-final__intro,
+  .cs-final-band__intro {
+    max-width: none;
+  }
+
+  .cs-final-band {
+    padding-inline-start: 0;
+  }
+
+  .cs-hero__media {
+    justify-content: stretch;
+  }
+
+  .cs-intro {
+    min-height: 0;
+    padding-block: var(--space-16);
+  }
+
+  .cs-solution {
+    grid-template-columns: 1fr;
+    padding-inline: var(--mobile-gutter);
+    gap: var(--space-9);
+  }
+
+  .cs-banner--inset {
+    width: 100%;
+    margin-inline-start: 0;
+  }
+
+  .cs-numbered {
+    grid-template-columns: minmax(48px, auto) minmax(0, 1fr);
+    gap: var(--space-4);
+  }
+
+  .cs-persona__head {
+    grid-template-columns: 120px minmax(0, 1fr);
+  }
+}
