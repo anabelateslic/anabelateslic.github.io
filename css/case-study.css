@@ -60,6 +60,8 @@
   font-weight: 300;
   font-size: 48px;
   line-height: 1;
+  /* uniform digit widths keep the numbered rows' text aligned */
+  font-variant-numeric: tabular-nums;
   color: var(--color-number);
   margin: 0;
 }
@@ -170,6 +172,8 @@
 .cs-hero__media {
   display: flex;
   justify-content: flex-end;
+  /* image sits flush with the right page edge */
+  margin-inline-end: calc(-1 * var(--cs-inset-end));
 }
 
 /* Intro: lead text only, vertically centred */
@@ -192,7 +196,7 @@
   max-width: calc(521px + var(--cs-inset-start));
   padding-inline-start: var(--cs-inset-start);
   padding-inline-end: var(--cs-inset-end);
-  padding-block: clamp(64px, 7vw, 80px);
+  padding-block: clamp(64px, 7vw, 80px) calc(clamp(64px, 7vw, 80px) + var(--space-20));
 }
 
 .cs-overview__block {
@@ -230,12 +234,13 @@
 .cs-split__aside {
   padding-inline-start: var(--cs-inset-start);
   padding-inline-end: var(--space-12);
-  padding-block-start: clamp(80px, 12vw, 200px);
+  padding-block-start: var(--space-60);
 }
 
 .cs-split__content {
   padding-inline-end: var(--cs-inset-end);
-  padding-block: clamp(64px, 8vw, 120px);
+  /* same 240px top offset as the aside so the list tops align with the title */
+  padding-block: var(--space-60) clamp(64px, 8vw, 120px);
 }
 
 /* Numbered challenge / insight list */
@@ -247,8 +252,10 @@
 
 .cs-numbered {
   display: grid;
-  grid-template-columns: minmax(64px, auto) minmax(0, 476px);
-  gap: var(--space-6);
+  /* number column hugs the numeral (max-content cannot absorb free space,
+     unlike auto) so the text never sits more than 20px away */
+  grid-template-columns: max-content minmax(0, 476px);
+  gap: var(--space-5);
   align-items: start;
 }
 
@@ -283,11 +290,41 @@
 }
 
 .cs-feature-row--media-bottom {
-  align-items: end;
+  /* title and text start level with the top of the image */
+  align-items: start;
 }
 
 .cs-feature-row--media-top {
   align-items: start;
+}
+
+/* media flush with the right page edge (E-Sharp challenges, Snagie design) */
+.cs-feature-row--bleed .cs-feature-row__media {
+  padding-inline-end: 0;
+}
+
+/* "Starting the Design" rows breathe more than the generic feature row */
+.cs-feature-row--media-top .cs-feature-row__text {
+  padding-block: calc(clamp(64px, 8vw, 120px) + var(--space-20)) calc(clamp(64px, 8vw, 120px) + var(--space-20));
+}
+
+/* text top padding mirrors the media's so the title aligns with the image top */
+.cs-feature-row--media-bottom .cs-feature-row__text {
+  padding-block: calc(clamp(48px, 6vw, 94px) + var(--space-20)) calc(clamp(64px, 8vw, 120px) + var(--space-20));
+}
+
+.cs-feature-row--media-bottom .cs-feature-row__media {
+  padding-block: calc(clamp(48px, 6vw, 94px) + var(--space-20)) calc(clamp(48px, 6vw, 94px) + var(--space-20));
+}
+
+/* +80px section offset minus the 40px lift on the image itself */
+.cs-feature-row--media-top .cs-feature-row__media {
+  padding-block: calc(clamp(48px, 6vw, 94px) + var(--space-10)) calc(clamp(48px, 6vw, 94px) + var(--space-20));
+}
+
+/* "Low-Fidelity Prototype" label: 24px column gap + 16px = 40px from the text above */
+.cs-feature-row--media-bottom .cs-feature-row__text > .cs-subheading:last-child {
+  margin-block-start: var(--space-4);
 }
 
 /* --------------------------------------------------------------------------
@@ -305,14 +342,14 @@
   flex-direction: column;
   gap: var(--space-8);
   padding-inline-start: var(--cs-inset-start);
-  padding-inline-end: var(--space-16);
-  padding-block: clamp(80px, 9vw, 140px);
+  padding-inline-end: calc(var(--space-16) + var(--space-10));
+  padding-block: calc(clamp(80px, 9vw, 140px) + 50px);
 }
 
 .cs-research__persona {
-  padding-inline-start: var(--space-15);
+  padding-inline-start: var(--space-25);
   padding-inline-end: var(--cs-inset-end);
-  padding-block: clamp(64px, 8vw, 120px);
+  padding-block: calc(clamp(64px, 8vw, 120px) + 50px);
 }
 
 .cs-persona {
@@ -327,6 +364,8 @@
   grid-template-columns: 215px minmax(0, 1fr);
   gap: var(--space-6);
   align-items: end;
+  /* 40px stack gap + 80px = 120px before the Goals group */
+  margin-block-end: var(--space-20);
 }
 
 .cs-persona__meta {
@@ -400,6 +439,15 @@
   padding-block: clamp(72px, 9vw, 120px);
 }
 
+/* stagger: left caption + screen sit ~100px above the right pair */
+.cs-solution > :nth-child(-n + 2) {
+  transform: translateY(-50px);
+}
+
+.cs-solution > :nth-child(n + 3) {
+  transform: translateY(50px);
+}
+
 /* Snagie "challenge solution": caption + wide screenshot rows on a gradient band */
 .cs-solution-stack {
   display: flex;
@@ -437,13 +485,15 @@
   gap: var(--space-8);
   padding-inline-start: var(--cs-inset-start);
   padding-inline-end: var(--space-16);
-  padding-block: clamp(64px, 8vw, 140px);
+  padding-block: clamp(64px, 8vw, 140px) calc(clamp(64px, 8vw, 140px) + var(--space-20));
 }
 
 .cs-panel-duo__content {
   padding-inline-start: var(--space-15);
   padding-inline-end: var(--cs-inset-end);
-  padding-block: clamp(96px, 12vw, 200px) clamp(40px, 5vw, 48px);
+  /* top offset = panel padding + heading block (~120px) so the list starts
+     level with the panel's body text */
+  padding-block: calc(clamp(64px, 8vw, 140px) + 120px) calc(clamp(40px, 5vw, 48px) + var(--space-20));
 }
 
 /* --------------------------------------------------------------------------
@@ -480,6 +530,55 @@
   gap: var(--space-6);
 }
 
+/* Artura: narrower right mockup, taller bottom margins */
+.cs-changes--artura .cs-changes__col--panel {
+  padding-block-end: calc(clamp(48px, 6vw, 80px) + var(--space-20));
+}
+
+.cs-changes--artura .cs-changes__col--media {
+  padding-block-end: calc(clamp(40px, 5vw, 48px) + var(--space-20));
+}
+
+.cs-changes--artura .cs-changes__col--media .cs-figure {
+  width: calc(100% - 100px);
+}
+
+/* Snagie: columns top-align so the first right mockup starts level with the
+   "Changes" title, and the left column staggers down the page */
+.cs-changes--snagie {
+  align-items: start;
+}
+
+.cs-changes--snagie .cs-changes__col--media {
+  padding-block-start: clamp(64px, 8vw, 160px);
+}
+
+/* 20px list gap + 220px = 240px above the last change note */
+.cs-changes--snagie .cs-changes__list > .cs-body:last-child {
+  margin-block-start: calc(var(--space-60) - var(--space-5));
+}
+
+/* column gap tops up to a 200px gap above the left mockup */
+.cs-changes--snagie .cs-changes__col--panel > .cs-figure {
+  margin-block-start: calc(var(--space-50) - clamp(48px, 6vw, 100px));
+}
+
+/* 24px text gap + 176px = 200px between the "Changes" title and the body copy */
+.cs-changes--snagie .cs-changes__list {
+  margin-block-start: calc(var(--space-50) - var(--space-6));
+}
+
+/* --------------------------------------------------------------------------
+   Left-column body copy runs 80px narrower than its column
+   -------------------------------------------------------------------------- */
+.cs-hero .cs-lead__body .cs-body,
+.cs-feature-row--media-bottom .cs-feature-row__text .cs-body,
+.cs-feature-row--media-top .cs-feature-row__text .cs-body,
+.cs-panel-duo__panel .cs-body,
+.cs-changes__text .cs-body {
+  width: calc(100% - var(--space-20));
+}
+
 .cs-changes__list {
   display: flex;
   flex-direction: column;
@@ -511,6 +610,15 @@
   padding-inline-start: var(--space-15);
   padding-inline-end: var(--cs-inset-end);
   padding-block: clamp(48px, 6vw, 140px) clamp(40px, 5vw, 48px);
+}
+
+/* tall mockup: 40px wider than the column, flush with the right page edge,
+   lifted ~100px off the bottom-aligned baseline */
+.cs-final__col--right .cs-figure {
+  width: calc(100% + var(--space-10));
+  margin-inline-start: auto;
+  margin-inline-end: calc(-1 * var(--cs-inset-end));
+  margin-block-end: var(--space-25);
 }
 
 .cs-final__intro {
@@ -551,13 +659,13 @@
   padding: clamp(20px, 2.2vw, 33px) 0 clamp(20px, 2.2vw, 33px) clamp(20px, 2.2vw, 33px);
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  /* media hugs the left edge of the colour band */
+  justify-content: flex-start;
 }
 
 .cs-final-band__media .cs-figure {
   width: 100%;
   max-width: 297px;
-  margin-inline-start: auto;
 }
 
 /* --------------------------------------------------------------------------
@@ -618,6 +726,7 @@
 
   .cs-hero__media {
     justify-content: stretch;
+    margin-inline-end: 0;
   }
 
   .cs-intro {
@@ -643,5 +752,75 @@
 
   .cs-persona__head {
     grid-template-columns: 120px minmax(0, 1fr);
+    margin-block-end: 0;
+  }
+
+  /* neutralise the desktop-only refinements in the stacked fallback */
+  .cs-solution > :nth-child(n) {
+    transform: none;
+  }
+
+  /* stacked columns must fill the row, not shrink to their content */
+  .cs-split,
+  .cs-changes,
+  .cs-changes--snagie,
+  .cs-final,
+  .cs-feature-row--media-bottom,
+  .cs-feature-row--media-top {
+    align-items: stretch;
+  }
+
+  .cs-hero .cs-lead__body .cs-body,
+  .cs-feature-row--media-bottom .cs-feature-row__text .cs-body,
+  .cs-feature-row--media-top .cs-feature-row__text .cs-body,
+  .cs-panel-duo__panel .cs-body,
+  .cs-changes__text .cs-body {
+    width: auto;
+  }
+
+  .cs-changes--snagie .cs-changes__list {
+    margin-block-start: 0;
+  }
+
+  .cs-feature-row--media-bottom .cs-feature-row__text,
+  .cs-feature-row--media-top .cs-feature-row__text {
+    padding-block: var(--space-12);
+  }
+
+  .cs-feature-row--media-bottom .cs-feature-row__media,
+  .cs-feature-row--media-top .cs-feature-row__media {
+    padding-block: 0 var(--space-12);
+  }
+
+  .cs-feature-row--media-bottom .cs-feature-row__text > .cs-subheading:last-child {
+    margin-block-start: 0;
+  }
+
+  .cs-feature-row--bleed .cs-feature-row__media {
+    padding-inline-end: var(--mobile-gutter);
+  }
+
+  .cs-changes--artura .cs-changes__col--panel,
+  .cs-changes--artura .cs-changes__col--media {
+    padding-block: var(--space-12);
+  }
+
+  .cs-changes--artura .cs-changes__col--media .cs-figure {
+    width: 100%;
+  }
+
+  .cs-changes--snagie .cs-changes__col--media {
+    padding-block-start: var(--space-12);
+  }
+
+  .cs-changes--snagie .cs-changes__list > .cs-body:last-child,
+  .cs-changes--snagie .cs-changes__col--panel > .cs-figure {
+    margin-block-start: 0;
+  }
+
+  .cs-final__col--right .cs-figure {
+    width: 100%;
+    margin-inline: 0;
+    margin-block-end: 0;
   }
 }
