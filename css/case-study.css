@@ -414,7 +414,7 @@
 }
 
 .cs-band--snagie {
-  background: linear-gradient(137.86deg, #0277ac 3.58%, #489fc2 50.38%, #b3dae7 90.49%);
+  background: linear-gradient(137.86deg, #004c8a, #489fc2);
 }
 
 .cs-band--artura :is(.cs-heading, .cs-subheading, .cs-body),
@@ -426,6 +426,11 @@
 /* E-Sharp gradient band keeps dark numerals per the design */
 .cs-band--esharp .cs-number {
   color: var(--color-on-surface);
+}
+
+/* extra room below the closing transcript row */
+.cs-band--esharp .cs-feature-row:last-child {
+  padding-block-end: var(--space-20);
 }
 
 /* Artura "challenge solution" row: caption | screen | screen | caption */
@@ -540,7 +545,7 @@
 }
 
 .cs-changes--artura .cs-changes__col--media .cs-figure {
-  width: calc(100% - 100px);
+  width: min(480px, 100%);
 }
 
 /* Snagie: columns top-align so the first right mockup starts level with the
@@ -612,13 +617,19 @@
   padding-block: clamp(48px, 6vw, 140px) clamp(40px, 5vw, 48px);
 }
 
-/* tall mockup: 40px wider than the column, flush with the right page edge,
-   lifted ~100px off the bottom-aligned baseline */
+/* tall mockup: 140px wider than the column, flush with the right page edge,
+   lifted ~100px off the bottom-aligned baseline (explicit negative start
+   margin — auto would clamp to 0 and overflow) */
 .cs-final__col--right .cs-figure {
-  width: calc(100% + var(--space-10));
-  margin-inline-start: auto;
+  width: calc(100% + 140px);
+  margin-inline-start: calc(var(--cs-inset-end) - 140px);
   margin-inline-end: calc(-1 * var(--cs-inset-end));
   margin-block-end: var(--space-25);
+}
+
+/* left mockups sit 200px lower */
+.cs-final__images {
+  margin-block-start: var(--space-50);
 }
 
 .cs-final__intro {
@@ -709,9 +720,13 @@
   }
 
   .cs-feature-row__media,
-  .cs-research__persona,
-  .cs-panel-duo__content {
+  .cs-research__persona {
     padding-block-start: 0;
+  }
+
+  /* numbered results start 80px below the testing panel */
+  .cs-panel-duo__content {
+    padding-block-start: var(--space-20);
   }
 
   .cs-final__images,
@@ -750,9 +765,15 @@
     gap: var(--space-4);
   }
 
+  /* persona meta stacks beneath the photo */
   .cs-persona__head {
-    grid-template-columns: 120px minmax(0, 1fr);
+    grid-template-columns: 1fr;
+    justify-items: center;
     margin-block-end: 0;
+  }
+
+  .cs-persona__head .cs-figure {
+    max-width: 215px;
   }
 
   /* neutralise the desktop-only refinements in the stacked fallback */
@@ -792,12 +813,15 @@
     padding-block: 0 var(--space-12);
   }
 
+  /* 24px column gap + 16px = 40px below the text above (same as desktop) */
   .cs-feature-row--media-bottom .cs-feature-row__text > .cs-subheading:last-child {
-    margin-block-start: 0;
+    margin-block-start: var(--space-4);
   }
 
+  /* media rows run edge to edge on mobile (all three pages) */
+  .cs-feature-row__media,
   .cs-feature-row--bleed .cs-feature-row__media {
-    padding-inline-end: var(--mobile-gutter);
+    padding-inline: 0;
   }
 
   .cs-changes--artura .cs-changes__col--panel,
@@ -822,5 +846,65 @@
     width: 100%;
     margin-inline: 0;
     margin-block-end: 0;
+  }
+
+  /* ------------------------------------------------------------------
+     Mobile pass (Artura & Snagie centred layout, full-width media)
+     ------------------------------------------------------------------ */
+  .case-study--center {
+    text-align: center;
+  }
+
+  .case-study--center .cs-numbered {
+    justify-content: center;
+  }
+
+  /* hero image: full-bleed and cropped to a taller square ratio */
+  .cs-hero__media {
+    margin-inline: calc(-1 * var(--mobile-gutter));
+  }
+
+  .cs-hero__media img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  /* grey panel spans the whole research and changes sections */
+  .cs-research,
+  .cs-changes {
+    background: var(--color-surface-variant);
+  }
+
+  /* Artura mockup band: video runs the full page width */
+  .cs-final-band__media {
+    padding-inline: 0;
+  }
+
+  .cs-final-band__media .cs-figure {
+    max-width: none;
+  }
+
+  /* Snagie final: flatten the columns and reorder the mockups
+     (tall image first, then the two left images) */
+  .cs-final {
+    gap: var(--space-10);
+  }
+
+  .cs-final__col {
+    display: contents;
+  }
+
+  .cs-final__intro {
+    padding: var(--space-12) var(--mobile-gutter);
+  }
+
+  .cs-final__col--right .cs-figure {
+    order: 1;
+  }
+
+  .cs-final__images {
+    order: 2;
+    margin-block-start: 0;
+    padding-block-end: var(--space-12);
   }
 }

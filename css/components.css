@@ -483,7 +483,8 @@
 
   .btn-case-study {
     width: var(--button-width-sm);
-    height: var(--button-height-sm);
+    /* 48px = comfortable touch target (was 34px) */
+    height: 48px;
     margin-inline: auto;
     font-size: 12px;
     line-height: 18px;
