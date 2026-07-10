@@ -76,31 +76,44 @@
   z-index: 1;
 }
 
-.home-hero {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1600 / 720;
-  max-height: 720px;
-  min-height: 100dvh;
+/* Homepage: one image fills the viewport right of the sidebar; the page
+   itself never scrolls — a downward scroll gesture slides the image out and
+   hands over to the UX/UI Design page (js/home.js). */
+.page-home {
+  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
 }
 
+.page-home__main {
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.home-hero {
+  height: 100%;
+  padding-inline-start: var(--sidebar-width);
+  overflow: hidden;
+}
+
+.home-hero picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
 .home-hero__image {
-  position: absolute;
-  width: clamp(280px, 27.1%, 433px);
-  aspect-ratio: 433 / 580;
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   background: var(--color-surface-variant);
 }
 
-.home-hero__image--shoe {
-  inset-inline-start: 32.9%;
-  inset-block-start: 0;
-}
-
-.home-hero__image--dali {
-  inset-inline-start: 60%;
-  inset-block-end: 0;
+.page-home.is-exiting .home-hero picture {
+  transform: translateX(100%);
 }
 
 .project-section {
@@ -526,20 +539,13 @@
     z-index: 90;
   }
 
-  .home-hero {
-    aspect-ratio: auto;
-    max-height: none;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-5);
-    padding: var(--space-10) var(--mobile-gutter);
+  .page-home__main {
+    height: calc(100vh - var(--topbar-height));
+    height: calc(100dvh - var(--topbar-height));
   }
 
-  .home-hero__image {
-    position: static;
-    width: 100%;
-    aspect-ratio: 3 / 4;
+  .home-hero {
+    padding-inline-start: 0;
   }
 
   .project-section__main {

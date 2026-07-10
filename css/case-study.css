@@ -394,8 +394,8 @@
   flex-direction: column;
   gap: var(--space-2);
   margin: 0;
-  padding: 0;
-  list-style: none;
+  padding-inline-start: var(--space-5);
+  list-style: disc;
 }
 
 /* --------------------------------------------------------------------------
@@ -548,6 +548,13 @@
   width: min(480px, 100%);
 }
 
+/* left mockup matches the right one exactly; the panel column is narrower,
+   so the fixed width may run into its end padding on smaller desktops */
+.cs-changes--artura .cs-changes__col--panel .cs-figure {
+  width: 480px;
+  max-width: none;
+}
+
 /* Snagie: columns top-align so the first right mockup starts level with the
    "Changes" title, and the left column staggers down the page */
 .cs-changes--snagie {
@@ -618,13 +625,13 @@
 }
 
 /* tall mockup: 140px wider than the column, flush with the right page edge,
-   lifted ~100px off the bottom-aligned baseline (explicit negative start
+   lifted ~200px off the bottom-aligned baseline (explicit negative start
    margin — auto would clamp to 0 and overflow) */
 .cs-final__col--right .cs-figure {
   width: calc(100% + 140px);
   margin-inline-start: calc(var(--cs-inset-end) - 140px);
   margin-inline-end: calc(-1 * var(--cs-inset-end));
-  margin-block-end: var(--space-25);
+  margin-block-end: var(--space-50);
 }
 
 /* left mockups sit 200px lower */
@@ -829,6 +836,7 @@
     padding-block: var(--space-12);
   }
 
+  .cs-changes--artura .cs-changes__col--panel .cs-figure,
   .cs-changes--artura .cs-changes__col--media .cs-figure {
     width: 100%;
   }
@@ -906,5 +914,45 @@
     order: 2;
     margin-block-start: 0;
     padding-block-end: var(--space-12);
+  }
+
+  /* content sections open with an extra 40px of breathing room */
+  .cs-research,
+  .cs-split,
+  .cs-panel-duo,
+  .cs-changes,
+  .cs-final,
+  .cs-feature-row--media-top {
+    margin-block-start: var(--space-10);
+  }
+
+  /* Snagie "Starting the Design" ends flush with the section below */
+  .cs-feature-row--media-top .cs-feature-row__media {
+    padding-block-end: 0;
+  }
+
+  /* centred pages keep lists and numbered items readable: text runs left */
+  .case-study--center .cs-persona__list,
+  .case-study--center .cs-numbered__text {
+    text-align: left;
+  }
+
+  /* Snagie changes mockups run edge to edge */
+  .cs-changes--snagie .cs-changes__col .cs-figure {
+    width: calc(100% + 2 * var(--mobile-gutter));
+    margin-inline: calc(-1 * var(--mobile-gutter));
+  }
+
+  /* E-Sharp hero banner: 80px taller than its natural crop, anchored right */
+  .cs-banner:first-child .cs-figure img {
+    height: calc(100vw * 720 / 1700 + 80px);
+    object-fit: cover;
+    object-position: right center;
+  }
+
+  /* E-Sharp closing video clears the bottom of the page by 40px
+     (padding, not margin — a bottom margin would collapse out of the page) */
+  .cs-banner--inset {
+    padding-block-end: var(--space-10);
   }
 }
